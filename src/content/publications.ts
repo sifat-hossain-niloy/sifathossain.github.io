@@ -21,10 +21,10 @@ export const publications: Publication[] = [
     authors:
       'Anika Tabassum*, Md Sifat Hossain*, Md. Fahim Arefin, Tariqul Islam, Tarannum Shaila Zaman',
     venue:
-      'Under review (2nd phase) at ACM Transactions on Software Engineering and Methodology (TOSEM)',
+      'ACM Transactions on Software Engineering and Methodology (TOSEM), 2026',
     venueShort: 'TOSEM 2026',
     year: 2026,
-    status: 'under-review',
+    status: 'published',
     note: '* Equal contribution',
     highlight: true,
     links: [],
@@ -33,8 +33,9 @@ export const publications: Publication[] = [
     bibtex: `@article{tabassum2026apros,
   title   = {A-ProS: Towards Reliable Autonomous Programming Through Multi-Model Feedback},
   author  = {Tabassum, Anika and Hossain, Md Sifat and Arefin, Md. Fahim and Islam, Tariqul and Zaman, Tarannum Shaila},
-  journal = {Under review at ACM Transactions on Software Engineering and Methodology (TOSEM)},
-  year    = {2026}
+  journal = {ACM Transactions on Software Engineering and Methodology (TOSEM)},
+  year    = {2026},
+  publisher = {ACM}
 }`,
   },
   {

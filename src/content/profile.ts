@@ -10,12 +10,12 @@ export const profile = {
   photo: '/profile.jpg', // optional — drop a file at public/profile.jpg
   // Set this to your Google Scholar user id (the value after "user=" in the URL)
   // to auto-fetch citation counts at build time. Leave empty to hide the badge.
-  scholarUserId: '',
+  scholarUserId: 'ufzmCDQAAAAJ',
   links: {
     email: 'mailto:sifatb910@gmail.com',
     github: 'https://github.com/sifathossain',
     linkedin: 'https://www.linkedin.com/in/sifat-hossain',
-    scholar: 'https://scholar.google.com/citations?user=',
+    scholar: 'https://scholar.google.com/citations?user=ufzmCDQAAAAJ&hl=en',
     cv: '/cv',
     arxiv: 'https://arxiv.org/abs/2502.04355',
   },
@@ -32,4 +32,4 @@ export const bio = `I am a Software Engineer at Therap Services LLC and a recent
 
 During my undergraduate years I worked at the Data Mining Research Lab (DU) with Md. Fahim Arefin and Prof. Tarannum Shaila Zaman (UMBC), where I co-authored two papers studying how state-of-the-art LLMs solve ICPC-level competitive programming problems and how persistent multi-model feedback loops can make autonomous code generation substantially more reliable.
 
-I am actively applying for PhD programs starting Fall 2026, where I hope to continue working on reliable, reasoning-capable AI systems for software engineering.`;
+I am actively applying for PhD programs starting Fall 2027, where I hope to continue working on reliable, reasoning-capable AI systems for software engineering.`;

@@ -143,7 +143,7 @@ export default function Home() {
         <p className="text-[16px] leading-relaxed">
           The fastest way to reach me is by email at{' '}
           <a className="link" href={profile.links.email}>{profile.email}</a>.
-          I am currently applying for PhD positions for <strong>Fall 2026</strong>; I would be happy to discuss research fit or share my CV, thesis, and code on request.
+          I am currently applying for PhD positions for <strong>Fall 2027</strong>; I would be happy to discuss research fit or share my CV, thesis, and code on request.
         </p>
       </section>
     </>
