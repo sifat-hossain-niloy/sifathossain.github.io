@@ -32,7 +32,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ''
+          # Repo is hosted at https://<owner>.github.io/<repo>/, so we need a basePath.
+          # Change this if you rename the repo or move to a custom domain.
+          NEXT_PUBLIC_BASE_PATH: '/sifathossain.github.io'
       - name: Add .nojekyll
         run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3

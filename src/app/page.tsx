@@ -5,6 +5,7 @@ import { research, industry } from '@/content/experience';
 import { projects, education, achievements, skills } from '@/content/projects';
 import { PublicationItem } from '@/components/publication-item';
 import { ScholarBadge } from '@/components/scholar-badge';
+import { asset } from '@/lib/path';
 import { Mail, Github, Linkedin, GraduationCap, FileText } from 'lucide-react';
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
           {profile.scholarUserId && (
             <a className="link inline-flex items-center gap-1.5" href={`https://scholar.google.com/citations?user=${profile.scholarUserId}`} target="_blank" rel="noreferrer"><GraduationCap size={14} /> Scholar</a>
           )}
-          <a className="link inline-flex items-center gap-1.5" href="/Resume_of_Md_Sifat_Hossain__Research_.pdf" target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
+          <a className="link inline-flex items-center gap-1.5" href={asset('/Resume_of_Md_Sifat_Hossain__Research_.pdf')} target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
         </div>
         <div className="mt-6"><ScholarBadge /></div>
       </section>
