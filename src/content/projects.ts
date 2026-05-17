@@ -8,16 +8,26 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'LLM Benchmark Data Pipeline',
+    name: 'A-ProS',
+    stack: 'Python · OpenAI · DeepSeek · Selenium · Playwright · SQLite',
+    kind: 'research',
+    link: 'https://github.com/sifat-hossain-niloy/A-Pros',
+    description:
+      'Reference implementation of A-ProS (TOSEM 2026) — an autonomous agentic framework separating solution generation (GPT-4 / GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral) under a 2×3 factorial design. Persistent multi-model feedback loops achieve 2.2–2.3× greater gains than stateless baselines on 367 ICPC and Codeforces problems.',
+  },
+  {
+    name: 'Hybrid Feedback Loop — LLM Benchmark Pipeline',
     stack: 'Python · Selenium · BeautifulSoup · SQLite3',
     kind: 'research',
+    link: 'https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM',
     description:
-      'Engineered the data pipeline underlying LLM-ProS and A-ProS — scraping 166 ICPC problems, normalizing LaTeX/HTML, and structuring components (statements, I/O specs, constraints, samples) for automated LLM prompting and verdict logging. Extended to Codeforces (200+ additional problems), forming the 367-problem A-ProS benchmark. SQLite-backed per-attempt metadata (verdict, runtime, memory, iteration).',
+      'Data and orchestration pipeline underlying LLM-ProS (ICSE 2025) and the broader A-ProS benchmark — scraping 166 ICPC World Finals problems, normalizing LaTeX/HTML, structuring statements / I/O specs / constraints / samples, automating Codeforces Gym submissions, and capturing per-attempt verdict + runtime + memory in SQLite. Extended to Codeforces, forming the 367-problem benchmark used in A-ProS.',
   },
   {
     name: 'TikTok Scraper',
     stack: 'Python · Selenium · Requests · BeautifulSoup · SQLite3',
     kind: 'research',
+    link: 'https://github.com/sifat-hossain-niloy/Tiktok-Scraper',
     description:
       'Scraper extracting video descriptions and author metadata for specified keywords and tags, enabling structured analysis across 5,000+ videos. Selenium for dynamic rendering, BeautifulSoup for parsing, SQLite3 for storage — the same scraping architecture later applied in the LLM benchmark pipeline.',
   },
@@ -32,6 +42,7 @@ export const projects: Project[] = [
     name: 'JobGenie',
     stack: 'React.js · FastAPI · MongoDB',
     kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/jobgenie',
     description:
       'Job search platform with automated CV generation and personalized job matching, integrating live job scraping to fetch and rank relevant listings.',
   },
@@ -39,6 +50,7 @@ export const projects: Project[] = [
     name: 'OyeAmigo',
     stack: 'Kotlin · Android SDK',
     kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/OyeAmigo',
     description:
       'Personality-based social networking Android app with null-safe Kotlin architecture, reducing crash rates and improving runtime stability.',
   },

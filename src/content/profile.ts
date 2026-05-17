@@ -13,7 +13,7 @@ export const profile = {
   scholarUserId: 'ufzmCDQAAAAJ',
   links: {
     email: 'mailto:sifatb910@gmail.com',
-    github: 'https://github.com/sifathossain',
+    github: 'https://github.com/sifat-hossain-niloy',
     linkedin: 'https://www.linkedin.com/in/sifat-hossain',
     scholar: 'https://scholar.google.com/citations?user=ufzmCDQAAAAJ&hl=en',
     cv: '/cv',

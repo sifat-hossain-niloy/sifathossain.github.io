@@ -189,10 +189,28 @@ function ProjectList({ items }: { items: typeof projects }) {
       {items.map((p) => (
         <article key={p.name}>
           <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-            <h3 className="font-serif text-base font-semibold">{p.name}</h3>
+            <h3 className="font-serif text-base font-semibold">
+              {p.link ? (
+                <a href={p.link} target="_blank" rel="noreferrer" className="hover:text-accent dark:hover:text-accent-dark transition">
+                  {p.name}
+                </a>
+              ) : (
+                p.name
+              )}
+            </h3>
             <span className="font-mono text-xs text-ink-faint dark:text-neutral-500">{p.stack}</span>
           </div>
           <p className="mt-1.5 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-300">{p.description}</p>
+          {p.link && (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-block link text-xs font-sans"
+            >
+              Code on GitHub →
+            </a>
+          )}
         </article>
       ))}
     </div>

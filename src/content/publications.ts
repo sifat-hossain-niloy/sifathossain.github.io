@@ -27,7 +27,9 @@ export const publications: Publication[] = [
     status: 'published',
     note: '* Equal contribution',
     highlight: true,
-    links: [],
+    links: [
+      { label: 'Code', href: 'https://github.com/sifat-hossain-niloy/A-Pros' },
+    ],
     abstract:
       'A-ProS is an autonomous agentic framework that separates solution generation (GPT-4 / GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral) using persistent multi-model feedback loops. Evaluated on 367 ICPC and Codeforces problems under a 2×3 factorial design, stateful refinement achieves 2.2–2.3× greater gains than stateless baselines and reduces error repetition by 2.9–3.5×. We further analyze trust calibration (ECE) across critic models.',
     bibtex: `@article{tabassum2026apros,
@@ -53,6 +55,7 @@ export const publications: Publication[] = [
     links: [
       { label: 'arXiv', href: 'https://arxiv.org/abs/2502.04355' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2502.04355' },
+      { label: 'Code', href: 'https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM' },
     ],
     abstract:
       'We propose LLM-ProS, a novel evaluation framework benchmarking five state-of-the-art LLMs (GPT-4o, Mistral Large, Llama-3.1-405B, o1-mini, o1-preview) on 166 ICPC World Finals problems (2011–2024). Our analysis reveals that o1 models significantly outperform general-purpose models, primarily due to chain-of-thought reasoning and iterative refinement capabilities, and we characterize where each model class fails.',
