@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Publication } from '@/content/publications';
+import { asset } from '@/lib/path';
 import { ChevronDown, Copy, Check } from 'lucide-react';
 
 export function PublicationItem({ pub, index }: { pub: Publication; index: number }) {
@@ -16,10 +17,19 @@ export function PublicationItem({ pub, index }: { pub: Publication; index: numbe
   };
 
   return (
-    <li className="ref-item relative pl-12 mb-8">
+    <li className="ref-item relative pl-12 mb-10">
       <div className="absolute left-0 top-0 font-mono text-sm text-ink-faint dark:text-neutral-500 w-8 text-right">
         [{index + 1}]
       </div>
+      {pub.figure && (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={asset(pub.figure.src)}
+          alt={pub.figure.alt}
+          loading="lazy"
+          className="mb-4 w-full max-w-2xl rounded-sm border border-ink/10 dark:border-neutral-800 bg-paper-alt dark:bg-neutral-900"
+        />
+      )}
       <h3 className="font-serif text-[17px] leading-snug font-semibold text-ink dark:text-neutral-100">
         {pub.title}
       </h3>

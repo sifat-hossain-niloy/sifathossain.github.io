@@ -11,6 +11,7 @@ export type Publication = {
   bibtex: string;
   highlight?: boolean;
   note?: string;
+  figure?: { src: string; alt: string };
 };
 
 export const publications: Publication[] = [
@@ -27,6 +28,10 @@ export const publications: Publication[] = [
     status: 'published',
     note: '* Equal contribution',
     highlight: true,
+    figure: {
+      src: '/A-PROS.png',
+      alt: 'A-ProS framework diagram: problem acquisition and preprocessing feeds a GPT-based solution generator, whose outputs are submitted to Codeforces; verdicts drive a multi-model debugging feedback loop (Codestral, Llama-3.3, DeepSeek-R1) that iteratively refines the solution.',
+    },
     links: [
       { label: 'arXiv', href: 'https://arxiv.org/abs/2605.18073' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2605.18073' },
@@ -56,6 +61,10 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'published',
     highlight: true,
+    figure: {
+      src: '/LLM-PROS.png',
+      alt: 'LLM-ProS pipeline: ICPC problem data collection, data preprocessing, model testing across GPT-4o / Mistral Large / Llama / OpenAI o1 models, and automated submission with verdict classification (Accepted, Compilation error, Time limit exceeded, Wrong answer).',
+    },
     links: [
       { label: 'arXiv', href: 'https://arxiv.org/abs/2502.04355' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2502.04355' },
