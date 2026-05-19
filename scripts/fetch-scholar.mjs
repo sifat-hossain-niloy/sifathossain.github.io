@@ -1,7 +1,7 @@
 // Build-time Google Scholar fetcher.
 // Reads scholarUserId from src/content/profile.ts, scrapes the public citations page,
 // and writes public/scholar.json with { citations, hIndex, i10Index, updatedAt }.
-// Fails gracefully — if the network call or parse fails, the badge is simply hidden.
+// Fails gracefully - if the network call or parse fails, the badge is simply hidden.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,7 +22,7 @@ function extractUserId() {
 async function main() {
   const userId = extractUserId();
   if (!userId) {
-    console.log('[scholar] No scholarUserId set in profile.ts — skipping badge.');
+    console.log('[scholar] No scholarUserId set in profile.ts - skipping badge.');
     if (fs.existsSync(outPath)) fs.unlinkSync(outPath);
     return;
   }

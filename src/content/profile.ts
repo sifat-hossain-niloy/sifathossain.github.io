@@ -7,7 +7,7 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   email: 'sifatb910@gmail.com',
   phone: '+880 1828 102576',
-  photo: '/profile.jpg', // optional — drop a file at public/profile.jpg
+  photo: '/Profile-picture.png',
   // Set this to your Google Scholar user id (the value after "user=" in the URL)
   // to auto-fetch citation counts at build time. Leave empty to hide the badge.
   scholarUserId: 'ufzmCDQAAAAJ',
@@ -28,7 +28,7 @@ export const profile = {
   ],
 };
 
-export const bio = `I am a Software Engineer at Therap Services LLC and a recent Computer Science graduate from the University of Dhaka. My research lives at the intersection of large language models, autonomous software engineering, and agentic AI — building systems that can reason about, write, and refine code through structured multi-model feedback.
+export const bio = `I am a Software Engineer at Therap Services LLC and a recent Computer Science graduate from the University of Dhaka. My research lives at the intersection of large language models, autonomous software engineering, and agentic AI - building systems that can reason about, write, and refine code through structured multi-model feedback.
 
 During my undergraduate years I worked at the Data Mining Research Lab (DU) with Md. Fahim Arefin and Prof. Tarannum Shaila Zaman (UMBC), where I co-authored two papers studying how state-of-the-art LLMs solve ICPC-level competitive programming problems and how persistent multi-model feedback loops can make autonomous code generation substantially more reliable.
 

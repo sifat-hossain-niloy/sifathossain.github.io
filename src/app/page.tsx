@@ -12,23 +12,33 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="pt-10 md:pt-14">
-        <h1 className="font-serif text-4xl md:text-5xl font-semibold tracking-tight text-ink dark:text-neutral-100">
-          {profile.name}
-        </h1>
-        <p className="mt-4 text-[17px] md:text-lg leading-relaxed text-ink-muted dark:text-neutral-300 max-w-2xl">
-          {profile.tagline}
-        </p>
-        <p className="mt-3 text-sm font-sans text-accent dark:text-accent-dark">
-          {profile.status}
-        </p>
-        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-sans text-sm">
-          <a className="link inline-flex items-center gap-1.5" href={profile.links.email}><Mail size={14} /> Email</a>
-          <a className="link inline-flex items-center gap-1.5" href={profile.links.github} target="_blank" rel="noreferrer"><Github size={14} /> GitHub</a>
-          <a className="link inline-flex items-center gap-1.5" href={profile.links.linkedin} target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a>
-          <a className="link inline-flex items-center gap-1.5" href={asset('/Resume_of_Md_Sifat_Hossain__Research_.pdf')} target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
+      <section className="pt-10 md:pt-14 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-8 sm:gap-10 items-start">
+        <div>
+          <h1 className="font-serif text-4xl md:text-5xl font-semibold tracking-tight text-ink dark:text-neutral-100">
+            {profile.name}
+          </h1>
+          <p className="mt-4 text-[17px] md:text-lg leading-relaxed text-ink-muted dark:text-neutral-300 max-w-2xl">
+            {profile.tagline}
+          </p>
+          <p className="mt-3 text-sm font-sans text-accent dark:text-accent-dark">
+            {profile.status}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-sans text-sm">
+            <a className="link inline-flex items-center gap-1.5" href={profile.links.email}><Mail size={14} /> Email</a>
+            <a className="link inline-flex items-center gap-1.5" href={profile.links.github} target="_blank" rel="noreferrer"><Github size={14} /> GitHub</a>
+            <a className="link inline-flex items-center gap-1.5" href={profile.links.linkedin} target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a>
+            <a className="link inline-flex items-center gap-1.5" href={asset('/Resume_of_Md_Sifat_Hossain__Research_.pdf')} target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
+          </div>
+          <div className="mt-6"><ScholarBadge /></div>
         </div>
-        <div className="mt-6"><ScholarBadge /></div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={asset(profile.photo)}
+          alt={profile.name}
+          width={160}
+          height={160}
+          className="order-first sm:order-none w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border border-ink/15 dark:border-neutral-700 shadow-sm"
+        />
       </section>
 
       {/* ABOUT */}
@@ -80,7 +90,7 @@ export default function Home() {
         <div>
           <div className="flex flex-wrap items-baseline justify-between gap-x-4">
             <h3 className="font-serif text-lg font-semibold">{education.school}</h3>
-            <span className="font-sans text-sm text-ink-faint dark:text-neutral-500">{education.start} – {education.end}</span>
+            <span className="font-sans text-sm text-ink-faint dark:text-neutral-500">{education.start} - {education.end}</span>
           </div>
           <p className="font-sans text-sm text-ink-muted dark:text-neutral-400 mt-1">{education.degree} · CGPA {education.cgpa}</p>
           <div className="mt-4 border-l-2 border-ink/10 dark:border-neutral-700 pl-4">
@@ -105,7 +115,7 @@ export default function Home() {
           {achievements.honors.map((h) => (
             <li key={h.title} className="text-[15px]">
               <span className="font-semibold">{h.title}</span>
-              <span className="text-ink-muted dark:text-neutral-400"> — {h.detail}</span>
+              <span className="text-ink-muted dark:text-neutral-400"> - {h.detail}</span>
             </li>
           ))}
         </ul>
@@ -114,7 +124,7 @@ export default function Home() {
           {achievements.competitive.map((h) => (
             <li key={h.title} className="text-[15px]">
               <span className="font-semibold">{h.title}</span>
-              <span className="text-ink-muted dark:text-neutral-400"> — {h.detail}</span>
+              <span className="text-ink-muted dark:text-neutral-400"> - {h.detail}</span>
             </li>
           ))}
         </ul>
@@ -158,7 +168,7 @@ function ExperienceList({ roles }: { roles: typeof research }) {
               {r.title} <span className="text-ink-muted dark:text-neutral-400 font-normal">· {r.org}</span>
             </h3>
             <span className="font-sans text-sm text-ink-faint dark:text-neutral-500 whitespace-nowrap">
-              {r.start} – {r.end}
+              {r.start} - {r.end}
             </span>
           </div>
           <p className="font-sans text-xs text-ink-faint dark:text-neutral-500 mt-0.5">{r.location}</p>
@@ -169,7 +179,7 @@ function ExperienceList({ roles }: { roles: typeof research }) {
           )}
           <ul className="mt-3 space-y-2 text-[15px] leading-relaxed">
             {r.bullets.map((b, i) => (
-              <li key={i} className="pl-5 relative before:content-['—'] before:absolute before:left-0 before:text-ink-faint">
+              <li key={i} className="pl-5 relative before:content-['-'] before:absolute before:left-0 before:text-ink-faint">
                 {b}
               </li>
             ))}

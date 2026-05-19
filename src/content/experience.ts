@@ -20,7 +20,7 @@ export const research: Role[] = [
     supervisor:
       'Md. Fahim Arefin (DU CSE), in collaboration with Prof. Tarannum Shaila Zaman (UMBC, Information Systems).',
     bullets: [
-      'Designed and implemented LLM-ProS, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a 166-problem dataset (2011–2024), built automated submission pipelines via Codeforces Gym, and analyzed five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning. Published at ICSE 2025 (LLM4Code).',
+      'Designed and implemented LLM-ProS, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a 166-problem dataset (2011-2024), built automated submission pipelines via Codeforces Gym, and analyzed five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning. Published at ICSE 2025 (LLM4Code).',
       'Extended this work into A-ProS, an autonomous multi-model agentic framework that separates solution generation from specialized debugging feedback under a 2×3 factorial design. Developed the full orchestration pipeline, Codeforces browser automation (Selenium + Playwright), verdict capture, and SQLite logging. Ran ablations on persistent vs. stateless context and trust calibration (ECE) across critic models. Accepted at ACM TOSEM 2026.',
       'Completed undergraduate thesis “A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows,” proposing an iterative test-driven benchmarking pipeline integrating OpenAI o3-mini with specialist LLMs (DeepSeek, Qwen) for error diagnosis and code refinement via Codeforces-based validation.',
     ],
@@ -46,7 +46,7 @@ export const research: Role[] = [
     end: 'Sep 2024',
     kind: 'research',
     bullets: [
-      'Developed a fraud detection model applying anomaly detection and supervised learning on imbalanced datasets, achieving 85% precision. Investigated model behavior under class imbalance and precision–recall trade-offs.',
+      'Developed a fraud detection model applying anomaly detection and supervised learning on imbalanced datasets, achieving 85% precision. Investigated model behavior under class imbalance and precision-recall trade-offs.',
       'Automated model training and deployment pipelines using Docker and Jenkins, enabling reproducible ML experimentation and continuous integration of model updates.',
     ],
   },

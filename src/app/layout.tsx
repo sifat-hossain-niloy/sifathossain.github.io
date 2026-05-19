@@ -26,13 +26,13 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://sifathossain.github.io'),
   title: {
-    default: `${profile.name} — CS Researcher & Software Engineer`,
-    template: `%s — ${profile.name}`,
+    default: `${profile.name} - CS Researcher & Software Engineer`,
+    template: `%s - ${profile.name}`,
   },
   description: profile.tagline,
   authors: [{ name: profile.name }],
   openGraph: {
-    title: `${profile.name} — CS Researcher & Software Engineer`,
+    title: `${profile.name} - CS Researcher & Software Engineer`,
     description: profile.tagline,
     type: 'website',
   },

@@ -13,15 +13,15 @@ export const projects: Project[] = [
     kind: 'research',
     link: 'https://github.com/sifat-hossain-niloy/A-Pros',
     description:
-      'Reference implementation of A-ProS (TOSEM 2026) — an autonomous agentic framework separating solution generation (GPT-4 / GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral) under a 2×3 factorial design. Persistent multi-model feedback loops achieve 2.2–2.3× greater gains than stateless baselines on 367 ICPC and Codeforces problems.',
+      'Reference implementation of A-ProS (TOSEM 2026) - an autonomous agentic framework separating solution generation (GPT-4 / GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral) under a 2×3 factorial design. Persistent multi-model feedback loops achieve 2.2-2.3× greater gains than stateless baselines on 367 ICPC and Codeforces problems.',
   },
   {
-    name: 'Hybrid Feedback Loop — LLM Benchmark Pipeline',
+    name: 'Hybrid Feedback Loop - LLM Benchmark Pipeline',
     stack: 'Python · Selenium · BeautifulSoup · SQLite3',
     kind: 'research',
     link: 'https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM',
     description:
-      'Data and orchestration pipeline underlying LLM-ProS (ICSE 2025) and the broader A-ProS benchmark — scraping 166 ICPC World Finals problems, normalizing LaTeX/HTML, structuring statements / I/O specs / constraints / samples, automating Codeforces Gym submissions, and capturing per-attempt verdict + runtime + memory in SQLite. Extended to Codeforces, forming the 367-problem benchmark used in A-ProS.',
+      'Data and orchestration pipeline underlying LLM-ProS (ICSE 2025) and the broader A-ProS benchmark - scraping 166 ICPC World Finals problems, normalizing LaTeX/HTML, structuring statements / I/O specs / constraints / samples, automating Codeforces Gym submissions, and capturing per-attempt verdict + runtime + memory in SQLite. Extended to Codeforces, forming the 367-problem benchmark used in A-ProS.',
   },
   {
     name: 'TikTok Scraper',
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     kind: 'research',
     link: 'https://github.com/sifat-hossain-niloy/Tiktok-Scraper',
     description:
-      'Scraper extracting video descriptions and author metadata for specified keywords and tags, enabling structured analysis across 5,000+ videos. Selenium for dynamic rendering, BeautifulSoup for parsing, SQLite3 for storage — the same scraping architecture later applied in the LLM benchmark pipeline.',
+      'Scraper extracting video descriptions and author metadata for specified keywords and tags, enabling structured analysis across 5,000+ videos. Selenium for dynamic rendering, BeautifulSoup for parsing, SQLite3 for storage - the same scraping architecture later applied in the LLM benchmark pipeline.',
   },
   {
     name: 'Smart Event Ticketing System',
@@ -87,7 +87,7 @@ export const education = {
 export const achievements = {
   honors: [
     {
-      title: 'Zelf Hackathon 2.0 — Honorable Mention',
+      title: 'Zelf Hackathon 2.0 - Honorable Mention',
       detail: 'Scraping Engineer track.',
     },
   ],
