@@ -5,7 +5,7 @@ export type Role = {
   start: string;
   end: string;
   bullets: string[];
-  kind: 'research' | 'industry';
+  kind: 'research' | 'industry' | 'leadership';
   supervisor?: string;
 };
 
@@ -76,6 +76,24 @@ export const industry: Role[] = [
     bullets: [
       'Built and deployed scalable web applications for 5+ clients using React.js and FastAPI, significantly reducing average page load times through targeted performance optimization.',
       'Architected CI/CD pipelines with automated testing and deployment workflows on AWS (EC2, S3, RDS), accelerating release cycles while maintaining production code quality.',
+    ],
+  },
+];
+
+export const leadership: Role[] = [
+  {
+    org: 'Notre Dame English Club, Notre Dame College, Dhaka',
+    title: 'Vice President, ICT and Graphics',
+    location: 'Dhaka, Bangladesh',
+    start: '2018',
+    end: '2019',
+    kind: 'leadership',
+    bullets: [
+      'Led the ICT and Graphics wing of the Notre Dame English Club, one of the oldest and most active student literary and debating societies in Bangladesh, owning digital communications, visual branding, and event-operations technology for the club\'s two flagship national competitions.',
+      'Organized the 6th National English Carnival, a multi-day national-level academic competition that drew over 10,000 participants from institutions across the country, spanning 30+ events including debate, public speaking, creative writing, quiz, and presentation tracks.',
+      'Owned end-to-end judge coordination and external communications: invited, briefed, and scheduled judges drawn from industry, academia, and senior education (university professors, corporate executives, and senior teachers), and served as the single point of contact ensuring fair and professional evaluation across parallel event tracks.',
+      'Led sponsorship acquisition for the event, securing partnerships with corporate sponsors that fully funded operations, logistics, and prize pools, and developed sponsor decks, outreach pipelines, and post-event reporting.',
+      'Previously co-ordinated the 5th National English Carnival (5,000+ participants), gaining the operational experience that informed the scaled-up 6th edition.',
     ],
   },
 ];

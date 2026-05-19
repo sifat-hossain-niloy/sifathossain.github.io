@@ -95,8 +95,23 @@ export const achievements = {
     {
       title: 'Codeforces',
       detail: 'Max rating 1603 (Expert) · 1000+ problems solved.',
+      href: 'https://codeforces.com/profile/Kacchi',
     },
-    { title: 'CodeChef', detail: '4★' },
+    {
+      title: 'CodeChef',
+      detail: '4★ · max rating 1921.',
+      href: 'https://www.codechef.com/users/kacchi',
+    },
+    {
+      title: 'AtCoder',
+      detail: 'Handle sifat_sif · regular contest participant.',
+      href: 'https://atcoder.jp/users/sifat_sif',
+    },
+    {
+      title: 'LeetCode',
+      detail: 'Handle sifat_sif.',
+      href: 'https://leetcode.com/u/sifat_sif/',
+    },
     {
       title: 'ICPC Dhaka Regional Onsite',
       detail: 'Top-35 of 220+ teams (2023) · Top-49 of 309 teams (2024).',

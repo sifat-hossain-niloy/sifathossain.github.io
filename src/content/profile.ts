@@ -14,7 +14,7 @@ export const profile = {
   links: {
     email: 'mailto:sifatb910@gmail.com',
     github: 'https://github.com/sifat-hossain-niloy',
-    linkedin: 'https://www.linkedin.com/in/sifat-hossain',
+    linkedin: 'https://www.linkedin.com/in/md-sifat-hossain-niloy/',
     scholar: 'https://scholar.google.com/citations?user=ufzmCDQAAAAJ&hl=en',
     cv: '/cv',
     arxiv: 'https://arxiv.org/abs/2502.04355',

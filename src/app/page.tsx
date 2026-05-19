@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { profile, bio } from '@/content/profile';
 import { publications } from '@/content/publications';
-import { research, industry } from '@/content/experience';
+import { research, industry, leadership } from '@/content/experience';
 import { projects, education, achievements, skills } from '@/content/projects';
 import { PublicationItem } from '@/components/publication-item';
 import { ScholarBadge } from '@/components/scholar-badge';
@@ -73,6 +73,9 @@ export default function Home() {
 
         <h2 className="section-title">Industry Experience</h2>
         <ExperienceList roles={industry} />
+
+        <h2 className="section-title">Leadership & Service</h2>
+        <ExperienceList roles={leadership} />
       </section>
 
       {/* PROJECTS */}
@@ -121,12 +124,21 @@ export default function Home() {
         </ul>
         <div className="subhead mb-3">Competitive programming</div>
         <ul className="space-y-2">
-          {achievements.competitive.map((h) => (
-            <li key={h.title} className="text-[15px]">
-              <span className="font-semibold">{h.title}</span>
-              <span className="text-ink-muted dark:text-neutral-400"> - {h.detail}</span>
-            </li>
-          ))}
+          {achievements.competitive.map((h) => {
+            const item = h as { title: string; detail: string; href?: string };
+            return (
+              <li key={item.title} className="text-[15px]">
+                {item.href ? (
+                  <a href={item.href} target="_blank" rel="noreferrer" className="font-semibold link">
+                    {item.title}
+                  </a>
+                ) : (
+                  <span className="font-semibold">{item.title}</span>
+                )}
+                <span className="text-ink-muted dark:text-neutral-400"> - {item.detail}</span>
+              </li>
+            );
+          })}
         </ul>
       </section>
 
