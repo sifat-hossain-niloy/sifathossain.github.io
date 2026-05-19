@@ -66,25 +66,10 @@ export default function Home() {
         </ol>
       </section>
 
-      {/* EXPERIENCE */}
+      {/* RESEARCH EXPERIENCE */}
       <section id="experience" className="scroll-mt-24">
         <h2 className="section-title">Research Experience</h2>
         <ExperienceList roles={research} />
-
-        <h2 className="section-title">Industry Experience</h2>
-        <ExperienceList roles={industry} />
-
-        <h2 className="section-title">Leadership & Service</h2>
-        <ExperienceList roles={leadership} />
-      </section>
-
-      {/* PROJECTS */}
-      <section id="projects" className="scroll-mt-24">
-        <h2 className="section-title">Projects</h2>
-        <div className="subhead mb-4">Research & data</div>
-        <ProjectList items={projects.filter(p => p.kind === 'research')} />
-        <div className="subhead mt-10 mb-4">Software</div>
-        <ProjectList items={projects.filter(p => p.kind === 'software')} />
       </section>
 
       {/* EDUCATION */}
@@ -108,6 +93,24 @@ export default function Home() {
             </ul>
           </div>
         </div>
+      </section>
+
+      {/* INDUSTRY & SERVICE */}
+      <section className="scroll-mt-24">
+        <h2 className="section-title">Industry Experience</h2>
+        <ExperienceList roles={industry} />
+
+        <h2 className="section-title">Leadership & Service</h2>
+        <ExperienceList roles={leadership} />
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="scroll-mt-24">
+        <h2 className="section-title">Projects</h2>
+        <div className="subhead mb-4">Research & data</div>
+        <ProjectList items={projects.filter(p => p.kind === 'research')} />
+        <div className="subhead mt-10 mb-4">Software</div>
+        <ProjectList items={projects.filter(p => p.kind === 'software')} />
       </section>
 
       {/* ACHIEVEMENTS */}
