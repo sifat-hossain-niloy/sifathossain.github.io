@@ -14,8 +14,8 @@ export const research: Role[] = [
     org: 'Data Mining Research Lab, University of Dhaka',
     title: 'Research Assistant',
     location: 'Dhaka, Bangladesh',
-    start: 'Jan 2024',
-    end: 'Feb 2025',
+    start: 'Aug 2023',
+    end: 'Present',
     kind: 'research',
     supervisor:
       'Md. Fahim Arefin (DU CSE), in collaboration with Prof. Tarannum Shaila Zaman (UMBC, Information Systems).',
@@ -89,11 +89,9 @@ export const leadership: Role[] = [
     end: '2019',
     kind: 'leadership',
     bullets: [
-      'Led the ICT and Graphics wing of the Notre Dame English Club, one of the oldest and most active student literary and debating societies in Bangladesh, owning digital communications, visual branding, and event-operations technology for the club\'s two flagship national competitions.',
-      'Organized the 6th National English Carnival, a multi-day national-level academic competition that drew over 10,000 participants from institutions across the country, spanning 30+ events including debate, public speaking, creative writing, quiz, and presentation tracks.',
-      'Owned end-to-end judge coordination and external communications: invited, briefed, and scheduled judges drawn from industry, academia, and senior education (university professors, corporate executives, and senior teachers), and served as the single point of contact ensuring fair and professional evaluation across parallel event tracks.',
-      'Led sponsorship acquisition for the event, securing partnerships with corporate sponsors that fully funded operations, logistics, and prize pools, and developed sponsor decks, outreach pipelines, and post-event reporting.',
-      'Previously co-ordinated the 5th National English Carnival (5,000+ participants), gaining the operational experience that informed the scaled-up 6th edition.',
+      'Organized the 6th National English Carnival, a national-level academic competition with 10,000+ participants across 30+ events; previously co-ordinated the 5th edition (5,000+ participants).',
+      'Owned judge coordination and external communications, managing scheduling and briefing for judges drawn from industry, academia, and senior education across parallel event tracks.',
+      'Led sponsorship outreach, securing corporate partnerships that funded event operations and prize pools.',
     ],
   },
 ];
