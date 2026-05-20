@@ -34,7 +34,7 @@ export const research: Role[] = [
     kind: 'research',
     bullets: [
       'Contributed to Reinforcement Learning from Human Feedback (RLHF) data creation supporting large-scale AI model alignment research, focusing on dataset quality, consistency, and annotation methodology for code and reasoning tasks.',
-      'Led a team of 10 researchers, establishing quality control protocols that ensured annotation reliability across diverse task domains.',
+      'Led a team of 10, establishing quality control protocols that ensured annotation reliability across diverse task domains.',
       'Coordinated cross-functional team activities and maintained consistency standards critical to downstream model training, directly supporting AI alignment objectives.',
     ],
   },
@@ -54,7 +54,7 @@ export const research: Role[] = [
 
 export const industry: Role[] = [
   {
-    org: 'Therap Services LLC',
+    org: 'Therap BD Ltd',
     title: 'Software Engineer',
     location: 'Dhaka, Bangladesh',
     start: 'Apr 2025',
@@ -63,7 +63,6 @@ export const industry: Role[] = [
     bullets: [
       'Develop and maintain scalable features for Therap’s EHR SaaS platform (used across all 50 US states) using Java, Spring, Hibernate, JSP, and Oracle DB, with a focus on correctness and reliability under HIPAA constraints.',
       'Build and containerize full-stack modules using React.js and Docker, deployed on WebLogic Server, contributing to platform stability and consistent delivery across environments.',
-      'Manage infrastructure provisioning with Terraform and AWS CloudFormation, and maintain CloudWatch-based monitoring to improve system reliability and reduce downtime.',
     ],
   },
   {
