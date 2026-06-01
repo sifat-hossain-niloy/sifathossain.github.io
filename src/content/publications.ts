@@ -35,6 +35,7 @@ export const publications: Publication[] = [
     links: [
       { label: 'arXiv', href: 'https://arxiv.org/abs/2605.18073' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2605.18073' },
+      { label: 'Project Page', href: 'https://sifat-hossain-niloy.github.io/A-Pros/' },
       { label: 'Code', href: 'https://github.com/sifat-hossain-niloy/A-Pros' },
     ],
     abstract:

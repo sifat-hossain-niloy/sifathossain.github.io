@@ -154,13 +154,5 @@ export const skills = {
     'Jupyter',
     'LaTeX',
   ],
-  'Cloud & DevOps': [
-    'AWS (EC2, S3, RDS, CloudWatch)',
-    'Terraform',
-    'Docker',
-    'Jenkins',
-    'WebLogic',
-    'Nginx',
-  ],
-  Tools: ['Git', 'Linux', 'Bash', 'JUnit5'],
+  Tools: ['Git', 'Linux', 'Bash', 'Docker', 'Jenkins', 'Nginx', 'JUnit5'],
 };

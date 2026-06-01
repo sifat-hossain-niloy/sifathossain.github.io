@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sifathossain.github.io'),
+  metadataBase: new URL('https://mdsifathossain.com'),
   title: {
     default: `${profile.name} - CS Researcher & Software Engineer`,
     template: `%s - ${profile.name}`,
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: profile.name,
               jobTitle: 'Software Engineer & Researcher',
               email: profile.email,
-              url: 'https://sifathossain.github.io',
+              url: 'https://mdsifathossain.com',
               sameAs: [profile.links.github, profile.links.linkedin],
               knowsAbout: profile.interests,
               alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Dhaka' },

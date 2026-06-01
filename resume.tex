@@ -1,0 +1,302 @@
+\documentclass[a4paper,9.5pt]{article}
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{mwe}
+\usepackage{wrapfig}
+\input{glyphtounicode}
+\usepackage{lmodern}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------------------------%
+%          CUSTOM COMMANDS                  %
+%-------------------------------------------%
+
+\newcommand{\seticon}[1]{{\csname #1\endcsname}}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Single-row project heading (no subtitle row)
+\newcommand{\resumeProjectSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------%
+\begin{document}
+
+%----------HEADING----------%
+\begin{center}
+    \textbf{\Large Md Sifat Hossain} \\[0.4em]
+    \small
+    \seticon{faPhone}~+880-1828-102576 \hspace{0.6em}
+    \href{mailto:sifatb910@gmail.com}{\seticon{faEnvelope}~\underline{sifatb910@gmail.com}} \hspace{0.6em}
+    \href{https://www.linkedin.com/in/md-sifat-hossain-niloy/}{\seticon{faLinkedin}~\underline{LinkedIn}} \hspace{0.6em}
+    \href{https://github.com/sifat-hossain-niloy}{\seticon{faGithub}~\underline{GitHub}} \hspace{0.6em}
+    \href{https://scholar.google.com/citations?user=ufzmCDQAAAAJ&hl=en}{\seticon{faGraduationCap}~\underline{Google Scholar}} \hspace{0.6em}
+    \href{https://sifat-hossain-niloy.github.io/sifathossain.github.io/}{\seticon{faGlobe}~\underline{Website}}
+\end{center}
+\vspace{-8pt}
+
+%-----------RESEARCH INTERESTS-----------%
+\section{Research Interests}
+\small{
+LLM-Based Code Generation and Automated Reasoning $\cdot$
+Multi-Agent Systems for Autonomous Software Engineering $\cdot$
+Benchmarking and Evaluation of Foundation Models $\cdot$
+AI Alignment and Reinforcement Learning from Human Feedback (RLHF)
+}
+
+%-----------EDUCATION-----------%
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {University of Dhaka}{January 2020 -- February 2025}
+    {Bachelor of Science in Computer Science and Engineering \textnormal{(CGPA: 3.13/4.00)}}{}
+    \resumeItemListStart
+        \resumeItem{\textbf{Thesis:} \textit{A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows} \newline Proposed a novel test-driven iterative benchmarking framework integrating multiple LLMs (OpenAI o3-mini, DeepSeek, Qwen) with Codeforces-based validation to evaluate and improve automated code generation and error correction in competitive programming contexts. \newline \textbf{Advisor:} Md.~Fahim Arefin, Lecturer, Dept.\ of CSE, University of Dhaka.}
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Object-Oriented Programming, Software Design Patterns, Artificial Intelligence, Probability \& Statistics, Theory of Computation, Machine Learning, Natural Language Processing, Compiler Design, Operating Systems, Database Management Systems, Software Engineering}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------%
+\section{Publications}
+\begin{enumerate}[leftmargin=0.35in, label={[\arabic*]}, itemsep=6pt]
+
+    \item[{[J1]}] Anika Tabassum$^*$, \textbf{Md Sifat Hossain}$^*$, Md.~Fahim Arefin, Tariqul Islam, and Tarannum Shaila Zaman.
+    \newline
+    ``\href{https://arxiv.org/abs/2605.18073}{A-ProS: Towards Reliable Autonomous Programming Through Multi-Model Feedback}.''
+    \newline
+    \textit{ACM Transactions on Software Engineering and Methodology} (\textbf{TOSEM}), 2026.
+    \newline
+    {\small \href{https://arxiv.org/abs/2605.18073}{\texttt{arXiv:2605.18073}} $\cdot$
+    \href{https://sifat-hossain-niloy.github.io/A-Pros/}{\texttt{[Project Page]}} $\cdot$
+    \href{https://github.com/sifat-hossain-niloy/A-Pros}{\texttt{[Code]}}}
+    \newline
+    {\small $^*$Equal contribution. Autonomous agentic framework separating solution generation (GPT-4/GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral) via persistent multi-model feedback loops. Evaluated on 367 ICPC and Codeforces problems; stateful refinement achieves 2.2--2.3$\times$ greater gains than stateless baselines and reduces error repetition by 2.9--3.5$\times$.}
+
+    \item[{[C1]}] \textbf{Md Sifat Hossain}, Anika Tabassum, Md.~Fahim Arefin, and Tarannum Shaila Zaman.
+    \newline
+    ``\href{https://arxiv.org/abs/2502.04355}{LLM-ProS: Analyzing Large Language Models' Performance in Competitive Problem Solving}.''
+    \newline
+    In \textit{Proceedings of the 1st ACM International Workshop on Large Language Models for Code} (\textbf{LLM4Code}),
+    co-located with ICSE~2025 -- 47th International Conference on Software Engineering, Ottawa, Canada, pp.~80--87.
+    \newline
+    {\small \href{https://arxiv.org/abs/2502.04355}{\texttt{arXiv:2502.04355}} $\cdot$
+    \href{https://arxiv.org/pdf/2502.04355}{\texttt{[PDF]}} $\cdot$
+    \href{https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM}{\texttt{[Code]}}}
+    \newline
+    {\small Novel evaluation framework benchmarking five state-of-the-art LLMs on 166 ICPC World Finals problems (2011--2024), revealing that o1 models significantly outperform general-purpose models due to chain-of-thought reasoning and iterative refinement capabilities.}
+
+\end{enumerate}
+
+%-----------RESEARCH EXPERIENCE-----------%
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Research Assistant}{August 2023 -- Present}
+    {Data Mining Research Lab, Dept.\ of CSE, University of Dhaka}{}
+    \resumeItemListStart
+        \resumeItem{\textbf{Supervisors:} Md.~Fahim Arefin, Lecturer, Dept.\ of CSE, University of Dhaka; in collaboration with Tarannum Shaila Zaman, Dept.\ of Information Systems, University of Maryland, Baltimore County (UMBC).}
+        \resumeItem{Designed and implemented \textbf{LLM-ProS}, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a dataset of 166 problems (2011--2024), developed automated submission pipelines via Codeforces Gym, and conducted systematic analysis of five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning metrics. Published at \textbf{ICSE 2025 (LLM4Code Workshop)}.}
+        \resumeItem{Extended this work into \textbf{A-ProS}, an autonomous multi-model agentic framework that separates solution generation from specialized debugging feedback under a 2$\times$3 factorial design. Developed the full orchestration pipeline, Codeforces browser automation (Selenium + Playwright), verdict capture system, and SQLite logging infrastructure. Conducted ablation studies on persistent vs.\ stateless context and trust calibration analysis (ECE) across critic models. Accepted at \textbf{ACM TOSEM 2026}.}
+        \resumeItem{Completed undergraduate thesis titled \textit{``A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows,''} proposing an iterative test-driven benchmarking pipeline integrating OpenAI o3-mini with specialist LLMs (DeepSeek, Qwen) for error diagnosis and code refinement via Codeforces-based validation.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {RLHF Data Researcher \& Pod Lead}{July 2025 -- December 2025}
+    {Turing Enterprises Inc.}{Remote}
+    \resumeItemListStart
+        \resumeItem{Contributed to \textbf{Reinforcement Learning from Human Feedback (RLHF)} data creation initiatives supporting large-scale AI model alignment research, focusing on dataset quality, consistency, and annotation methodology for code and reasoning tasks.}
+        \resumeItem{Led a team of 10, establishing quality control protocols that ensured annotation reliability across diverse task domains.}
+        \resumeItem{Coordinated cross-functional team activities and maintained consistency standards critical to downstream model training, directly supporting AI alignment objectives.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Machine Learning Research Intern}{August 2024 -- September 2024}
+    {Brainwave Matrix Solutions}{Remote, India}
+    \resumeItemListStart
+        \resumeItem{Developed a fraud detection model applying anomaly detection and supervised learning techniques on imbalanced datasets, achieving 85\% precision. Investigated model behavior under class imbalance and evaluated trade-offs between precision and recall in high-stakes classification settings.}
+        \resumeItem{Automated model training and deployment pipelines using Docker and Jenkins, enabling reproducible ML experimentation and continuous integration of model updates.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH PROJECTS-----------%
+\section{Research Software \& Artifacts}
+\resumeSubHeadingListStart
+
+    \resumeProjectSubheading
+    {LLM Benchmark Data Pipeline \normalfont{$\cdot$ \href{https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM}{\texttt{[Code]}}}}{Python, Selenium, BeautifulSoup, SQLite3}
+    \resumeItemListStart
+        \resumeItem{Engineered the full data pipeline underlying the LLM-ProS and A-ProS publications: scraped 166 ICPC World Finals problems, normalized LaTeX/HTML content, and structured problem components into a consistent format for automated LLM prompt construction and verdict logging. Extended to 200+ Codeforces problems, forming the 367-problem A-ProS benchmark.}
+        \resumeItem{Built SQLite-backed storage for per-attempt metadata (verdict, runtime, memory, iteration count), enabling reproducible experimental analysis across all model configurations.}
+    \resumeItemListEnd
+
+    \resumeProjectSubheading
+    {TikTok Scraper \normalfont{$\cdot$ \href{https://github.com/sifat-hossain-niloy/Tiktok-Scraper}{\texttt{[Code]}}}}{Python, Selenium, Requests, BeautifulSoup, SQLite3}
+    \resumeItemListStart
+        \resumeItem{Engineered a scraper extracting video descriptions and author metadata for specified keywords and tags, enabling structured analysis across 5000+ videos. Same scraping architecture later reused in the LLM benchmark pipeline.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------INDUSTRY EXPERIENCE-----------%
+\section{Industry Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Therap BD Ltd}{April 2025 -- Present}
+    {Software Engineer}{Dhaka, Bangladesh}
+    \resumeItemListStart
+        \resumeItem{Develop and maintain scalable features for Therap's EHR SaaS platform (used across 50 US states) using Java, Spring, Hibernate, JSP, and Oracle DB, with a focus on correctness and reliability under HIPAA compliance constraints.}
+        \resumeItem{Build and containerize full-stack modules using ReactJS and Docker, deployed on WebLogic Server, contributing to platform stability and consistent delivery across multiple environments.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Zeroxa DT}{March 2023 -- June 2024}
+    {Software Engineer (Part-time)}{Remote, London, UK}
+    \resumeItemListStart
+        \resumeItem{Built and deployed scalable web applications using React.js and FastAPI; architected CI/CD pipelines with automated testing on AWS (EC2, S3, RDS).}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------HONORS & AWARDS-----------%
+\section{Honors \& Awards}
+\resumeSubHeadingListStart
+    \resumeItemListStart
+        \resumeItem{\textbf{Zelf Hackathon 2.0} -- Honorable Mention, Scraping Engineer track.}
+        \resumeItem{\textbf{ICPC Dhaka Regional Onsite} -- Top-35 of 220+ teams (2023); Top-49 of 309 teams (2024).}
+        \resumeItem{\textbf{BUET Inter-University Programming Contest 2023} -- 5th place among 102 university teams.}
+        \resumeItem{\textbf{Samsung R\&D BD Coding Contest 2024} -- Final Round qualifier (rank 55 of 908 in Round~1).}
+        \resumeItem{\textbf{Meta Hacker Cup 2024} -- Round 2 qualifier (global rank 2166).}
+        \resumeItem{\textbf{NCPC 2023} -- 44th of 198 teams.}
+        \resumeItem{\textbf{Competitive Programming} -- Solved 1000+ problems across
+        \href{https://codeforces.com/profile/Kacchi}{\underline{Codeforces}} (max.\ rating 1603, \textit{Expert}),
+        \href{https://www.codechef.com/users/kacchi}{\underline{CodeChef}} (4$\bigstar$, max.\ rating 1921),
+        \href{https://atcoder.jp/users/sifat_sif}{\underline{AtCoder}}, and
+        \href{https://leetcode.com/u/sifat_sif/}{\underline{LeetCode}}.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------%
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Python, Java, C++, JavaScript, TypeScript, Kotlin} \\
+        \textbf{Frameworks \& Libraries}{: Spring Boot, Hibernate, FastAPI, React.js, Next.js, JSP, Selenium, Playwright, Docker, Nginx} \\
+        \textbf{Databases}{: PostgreSQL, Oracle DB, MongoDB, SQLite} \\
+        \textbf{Research \& ML Tools}{: PyTorch, HuggingFace Transformers, OpenAI API, Pandas, NumPy, Jupyter, \LaTeX} \\
+        \textbf{Developer Tools}{: Git, Linux, Bash, Jenkins, JUnit5, WebLogic Server}
+    }}
+\end{itemize}
+
+%-----------SERVICE & LEADERSHIP-----------%
+\section{Service \& Leadership}
+\resumeSubHeadingListStart
+    \resumeItemListStart
+        \resumeItem{\textbf{Vice-President, ICT and Graphics}, Notre Dame English Club, Notre Dame College, Dhaka. \newline Organized the 6th National English Carnival (10,000+ participants, 30+ events); previously co-ordinated the 5th edition (5,000+ participants). Led judge coordination, external communications, and sponsorship outreach.}
+        \resumeItem{\textbf{Debater}, Gregorian Debating Club. Participated in school-level debate competitions.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SELECTED SOFTWARE PROJECTS-----------%
+\section{Selected Software Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectSubheading
+    {Smart Event Ticketing System}{Java, Spring MVC, Hibernate/JPA, PostgreSQL, JSP}
+    \resumeItemListStart
+        \resumeItem{Multi-role event management platform with pessimistic locking for transactional consistency; real-time event filtering with asynchronous data retrieval.}
+    \resumeItemListEnd
+
+    \resumeProjectSubheading
+    {JobGenie \normalfont{$\cdot$ \href{https://github.com/sifat-hossain-niloy/jobgenie}{\texttt{[Code]}}}}{React.js, FastAPI, MongoDB}
+    \resumeItemListStart
+        \resumeItem{Job search platform with automated CV generation and personalized job matching via live job scraping.}
+    \resumeItemListEnd
+
+    \resumeProjectSubheading
+    {OyeAmigo \normalfont{$\cdot$ \href{https://github.com/sifat-hossain-niloy/OyeAmigo}{\texttt{[Code]}}}}{Kotlin, Android SDK}
+    \resumeItemListStart
+        \resumeItem{Personality-based social networking Android app with null-safe Kotlin architecture.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------REFERENCES-----------%
+\section{References}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Md.~Fahim Arefin} \hfill \href{mailto:fahim@cse.du.ac.bd}{\texttt{fahim@cse.du.ac.bd}} \\
+        Lecturer, Dept.\ of Computer Science and Engineering, University of Dhaka \\
+        {\small \textit{Supervised my undergraduate thesis and both publications (LLM-ProS, A-ProS).}}
+        \vspace{6pt} \\
+        \textbf{Tarannum Shaila Zaman} \hfill \href{mailto:zamant@umbc.edu}{\texttt{zamant@umbc.edu}} \\
+        Associate Professor, Dept.\ of Information Systems, University of Maryland, Baltimore County (UMBC) \\
+        {\small \textit{Research collaborator on LLM-ProS and A-ProS.}}
+    }}
+\end{itemize}
+
+\end{document}
