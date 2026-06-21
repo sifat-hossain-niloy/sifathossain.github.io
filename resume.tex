@@ -102,6 +102,7 @@
 \small{
 LLM-Based Code Generation and Automated Reasoning $\cdot$
 Multi-Agent Systems for Autonomous Software Engineering $\cdot$
+Cross-Language Program Repair and Polyglot Debugging $\cdot$
 Benchmarking and Evaluation of Foundation Models $\cdot$
 AI Alignment and Reinforcement Learning from Human Feedback (RLHF)
 }
@@ -124,11 +125,12 @@ AI Alignment and Reinforcement Learning from Human Feedback (RLHF)
 
     \item[{[J1]}] Anika Tabassum$^*$, \textbf{Md Sifat Hossain}$^*$, Md.~Fahim Arefin, Tariqul Islam, and Tarannum Shaila Zaman.
     \newline
-    ``\href{https://arxiv.org/abs/2605.18073}{A-ProS: Towards Reliable Autonomous Programming Through Multi-Model Feedback}.''
+    ``\href{https://dl.acm.org/doi/10.1145/3820891}{A-ProS: Towards Reliable Autonomous Programming Through Multi-Model Feedback}.''
     \newline
     \textit{ACM Transactions on Software Engineering and Methodology} (\textbf{TOSEM}), 2026.
     \newline
-    {\small \href{https://arxiv.org/abs/2605.18073}{\texttt{arXiv:2605.18073}} $\cdot$
+    {\small \href{https://dl.acm.org/doi/10.1145/3820891}{\texttt{DOI: 10.1145/3820891}} $\cdot$
+    \href{https://arxiv.org/abs/2605.18073}{\texttt{[PDF]}} $\cdot$
     \href{https://sifat-hossain-niloy.github.io/A-Pros/}{\texttt{[Project Page]}} $\cdot$
     \href{https://github.com/sifat-hossain-niloy/A-Pros}{\texttt{[Code]}}}
     \newline
@@ -136,16 +138,17 @@ AI Alignment and Reinforcement Learning from Human Feedback (RLHF)
 
     \item[{[C1]}] \textbf{Md Sifat Hossain}, Anika Tabassum, Md.~Fahim Arefin, and Tarannum Shaila Zaman.
     \newline
-    ``\href{https://arxiv.org/abs/2502.04355}{LLM-ProS: Analyzing Large Language Models' Performance in Competitive Problem Solving}.''
+    ``\href{https://dl.acm.org/doi/10.1109/LLM4Code66737.2025.00015}{LLM-ProS: Analyzing Large Language Models' Performance in Competitive Problem Solving}.''
     \newline
     In \textit{Proceedings of the 1st ACM International Workshop on Large Language Models for Code} (\textbf{LLM4Code}),
     co-located with ICSE~2025 -- 47th International Conference on Software Engineering, Ottawa, Canada, pp.~80--87.
     \newline
-    {\small \href{https://arxiv.org/abs/2502.04355}{\texttt{arXiv:2502.04355}} $\cdot$
+    {\small \href{https://ieeexplore.ieee.org/document/11028406}{\texttt{DOI: 10.1109/LLM4Code66737.2025.00015}} $\cdot$
     \href{https://arxiv.org/pdf/2502.04355}{\texttt{[PDF]}} $\cdot$
     \href{https://github.com/sifat-hossain-niloy/Hybrid-Feedback-Loop---LLM}{\texttt{[Code]}}}
     \newline
     {\small Novel evaluation framework benchmarking five state-of-the-art LLMs on 166 ICPC World Finals problems (2011--2024), revealing that o1 models significantly outperform general-purpose models due to chain-of-thought reasoning and iterative refinement capabilities.}
+
 
 \end{enumerate}
 
@@ -161,6 +164,7 @@ AI Alignment and Reinforcement Learning from Human Feedback (RLHF)
         \resumeItem{Designed and implemented \textbf{LLM-ProS}, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a dataset of 166 problems (2011--2024), developed automated submission pipelines via Codeforces Gym, and conducted systematic analysis of five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning metrics. Published at \textbf{ICSE 2025 (LLM4Code Workshop)}.}
         \resumeItem{Extended this work into \textbf{A-ProS}, an autonomous multi-model agentic framework that separates solution generation from specialized debugging feedback under a 2$\times$3 factorial design. Developed the full orchestration pipeline, Codeforces browser automation (Selenium + Playwright), verdict capture system, and SQLite logging infrastructure. Conducted ablation studies on persistent vs.\ stateless context and trust calibration analysis (ECE) across critic models. Accepted at \textbf{ACM TOSEM 2026}.}
         \resumeItem{Completed undergraduate thesis titled \textit{``A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows,''} proposing an iterative test-driven benchmarking pipeline integrating OpenAI o3-mini with specialist LLMs (DeepSeek, Qwen) for error diagnosis and code refinement via Codeforces-based validation.}
+        \resumeItem{\textbf{(Ongoing)} \textit{Polyglot Codebase Debugging and Cross-Language Program Repair with LLMs and Agentic AI.} Investigating the 40--60 percentage-point performance gap of LLM agents on cross-boundary bugs in Java+TypeScript and Python+Go enterprise stacks. Designing a localize-then-edit agent built on SCIP-based unified cross-language call graphs with REST/gRPC schema-aware reasoning, extending IBM iSWE-style AST tooling across language boundaries. Targeting an empirical taxonomy paper (MSR/ICSE) and a full systems evaluation on SWE-PolyBench and xCodeEval for \textbf{ICSE / FSE 2027}.}
     \resumeItemListEnd
 
     \resumeSubheading

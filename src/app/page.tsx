@@ -27,7 +27,7 @@ export default function Home() {
             <a className="link inline-flex items-center gap-1.5" href={profile.links.email}><Mail size={14} /> Email</a>
             <a className="link inline-flex items-center gap-1.5" href={profile.links.github} target="_blank" rel="noreferrer"><Github size={14} /> GitHub</a>
             <a className="link inline-flex items-center gap-1.5" href={profile.links.linkedin} target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a>
-            <a className="link inline-flex items-center gap-1.5" href={asset('/Resume_of_Md_Sifat_Hossain__Research_.pdf')} target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
+            <a className="link inline-flex items-center gap-1.5" href={asset('/CV_of_Md_Sifat_Hossain.pdf')} target="_blank" rel="noreferrer"><FileText size={14} /> CV (PDF)</a>
           </div>
           <div className="mt-6"><ScholarBadge /></div>
         </div>

@@ -23,6 +23,7 @@ export const profile = {
     'Large Language Models for Code Generation',
     'Agentic AI Systems & Multi-Model Feedback',
     'Autonomous Software Engineering',
+    'Cross-Language Program Repair & Polyglot Debugging',
     'Competitive Programming as LLM Benchmark',
     'AI Alignment & RLHF',
   ],
