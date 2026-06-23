@@ -62,7 +62,7 @@ export default function Home() {
           * denotes equal contribution. See the <Link href="/publications" className="link">publications page</Link> for full details and BibTeX.
         </p>
         <ol className="ref-list">
-          {publications.map((p, i) => <PublicationItem key={p.id} pub={p} index={i} />)}
+          {publications.map((p) => <PublicationItem key={p.id} pub={p} />)}
         </ol>
       </section>
 

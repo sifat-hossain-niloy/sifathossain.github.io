@@ -3,7 +3,6 @@ import { Inter, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
 import { profile } from '@/content/profile';
 
 const sans = Inter({
@@ -65,7 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-3xl px-6 md:px-8">
             <Header />
             <main>{children}</main>
-            <Footer />
           </div>
         </ThemeProvider>
       </body>

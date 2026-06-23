@@ -5,7 +5,7 @@ import { Publication } from '@/content/publications';
 import { asset } from '@/lib/path';
 import { ChevronDown, Copy, Check } from 'lucide-react';
 
-export function PublicationItem({ pub, index }: { pub: Publication; index: number }) {
+export function PublicationItem({ pub }: { pub: Publication }) {
   const [showAbstract, setShowAbstract] = useState(false);
   const [showBibtex, setShowBibtex] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -17,10 +17,7 @@ export function PublicationItem({ pub, index }: { pub: Publication; index: numbe
   };
 
   return (
-    <li className="ref-item relative pl-12 mb-10">
-      <div className="absolute left-0 top-0 font-mono text-sm text-ink-faint dark:text-neutral-500 w-8 text-right">
-        [{index + 1}]
-      </div>
+    <li className="ref-item mb-10">
       {pub.figure && (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img

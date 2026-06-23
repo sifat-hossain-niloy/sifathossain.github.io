@@ -14,7 +14,7 @@ export default function PublicationsPage() {
       </p>
       <div className="mt-5"><ScholarBadge /></div>
       <ol className="ref-list mt-10">
-        {publications.map((p, i) => <PublicationItem key={p.id} pub={p} index={i} />)}
+        {publications.map((p) => <PublicationItem key={p.id} pub={p} />)}
       </ol>
     </article>
   );
