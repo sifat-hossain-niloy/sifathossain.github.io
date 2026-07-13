@@ -64,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-3xl px-6 md:px-8">
             <Header />
             <main>{children}</main>
+            <footer aria-hidden className="h-24" />
           </div>
         </ThemeProvider>
       </body>

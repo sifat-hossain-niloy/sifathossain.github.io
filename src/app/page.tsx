@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { profile, bio } from '@/content/profile';
 import { publications } from '@/content/publications';
-import { research, industry, leadership } from '@/content/experience';
+import { research, industry, leadership, mentees, menteesSummary } from '@/content/experience';
 import { projects, education, achievements, skills } from '@/content/projects';
 import { PublicationItem } from '@/components/publication-item';
 import { ScholarBadge } from '@/components/scholar-badge';
@@ -153,6 +153,49 @@ export default function Home() {
                 {v.map((s) => <li key={s} className="chip">{s}</li>)}
               </ul>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* MENTEES */}
+      <section id="mentees" className="scroll-mt-24">
+        <h2 className="section-title">Mentees</h2>
+        <p className="text-[15px] leading-relaxed text-ink-muted dark:text-neutral-400 mb-10">
+          {menteesSummary}
+        </p>
+        <div className="space-y-10">
+          {mentees.map((m) => (
+            <article key={m.name}>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                <h3 className="font-serif text-lg font-semibold text-ink dark:text-neutral-100">
+                  {m.name}
+                </h3>
+                <span className="font-sans text-sm text-ink-faint dark:text-neutral-500">
+                  {m.affiliation}
+                </span>
+              </div>
+              <p className="font-sans text-xs text-ink-faint dark:text-neutral-500 mt-0.5">
+                {m.program}
+              </p>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink dark:text-neutral-200">
+                {m.summary}
+              </p>
+              {m.courses && m.courses.length > 0 && (
+                <div className="mt-4">
+                  <div className="subhead mb-2">Courses guided</div>
+                  <ul className="space-y-1.5 text-[15px]">
+                    {m.courses.map((c) => (
+                      <li key={c.code} className="flex flex-wrap gap-x-3">
+                        <span className="font-mono text-sm text-ink-muted dark:text-neutral-400 min-w-[70px]">
+                          {c.code}
+                        </span>
+                        <span className="text-ink dark:text-neutral-200">{c.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </article>
           ))}
         </div>
       </section>

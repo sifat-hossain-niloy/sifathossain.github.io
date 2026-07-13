@@ -80,6 +80,51 @@ export const industry: Role[] = [
   },
 ];
 
+export type Mentee = {
+  name: string;
+  affiliation: string;
+  program: string;
+  courses?: { code: string; name: string }[];
+  summary: string;
+};
+
+export const menteesSummary =
+  'Beyond the named mentees below, I have mentored 30+ students one-on-one through the Bangladesh Higher Secondary Certificate (HSC, classes 11-12) curriculum, and guided 10+ students preparing for Bangladesh public and private university admission tests.';
+
+export const mentees: Mentee[] = [
+  {
+    name: 'Ilhaan S Abdullah',
+    affiliation: 'University of California, Riverside (UCR)',
+    program: 'B.S. in Computer Science with Business Applications',
+    summary:
+      'Guided Ilhaan through the theoretical foundations and applied problem-solving for a broad slice of the UCR CS undergraduate core - from assembly and discrete structures through algorithms, theory of computation, operating systems, networks, security, and AI. Focus was on building durable intuition (why an algorithm works, what an OS abstraction is really protecting) rather than answer patterns.',
+    courses: [
+      { code: 'CS 061', name: 'Machine Organization and Assembly Language Programming' },
+      { code: 'CS 100', name: 'Software Construction' },
+      { code: 'CS 105', name: 'Computer Systems and C Programming' },
+      { code: 'CS 111', name: 'Discrete Structures' },
+      { code: 'CS 141', name: 'Intermediate Data Structures and Algorithms' },
+      { code: 'CS 150', name: 'Automata and Formal Languages' },
+      { code: 'CS 153', name: 'Design of Operating Systems' },
+      { code: 'CS 164', name: 'Computer Networks' },
+      { code: 'CS 165', name: 'Computer Security I' },
+      { code: 'CS 170', name: 'Introduction to Artificial Intelligence' },
+    ],
+  },
+  {
+    name: 'Md Mahi',
+    affiliation: 'BRAC University, Dhaka',
+    program: 'B.Sc. in Computer Science',
+    summary:
+      'Mentored Mahi since class 9 - starting with training for the Bangladesh Mathematical Olympiad, then progressing into competitive programming (data structures, algorithms, and problem-solving under contest constraints) and foundational Python. Continuing to advise on university-level CS coursework and project work.',
+    courses: [
+      { code: 'Olympiad', name: 'Bangladesh Mathematical Olympiad training' },
+      { code: 'CP', name: 'Competitive Programming (algorithms, data structures)' },
+      { code: 'Python', name: 'Introductory & intermediate Python programming' },
+    ],
+  },
+];
+
 export const leadership: Role[] = [
   {
     org: 'Notre Dame English Club, Notre Dame College, Dhaka',

@@ -1,0 +1,148 @@
+---
+title: 'A-ProS: Multi-Model LLM Feedback Loops for Reliable Autonomous Programming'
+date: '2026-05-20'
+description: 'A-ProS (TOSEM 2026) is an agentic framework that separates solution generation (GPT-4, GPT-5) from specialized debugging feedback (DeepSeek-R1, Llama-3.3, Codestral). Stateful multi-model feedback loops deliver 2.2-2.3× greater gains than stateless baselines and reduce error repetition by 2.9-3.5× on 367 ICPC and Codeforces problems.'
+tags: ['llm', 'agentic-ai', 'multi-model', 'autonomous-programming', 'code-generation', 'feedback-loop', 'gpt-5', 'deepseek', 'tosem', 'research']
+---
+
+## The problem with single-model autonomous coding agents
+
+Modern LLM coding agents — Devin, SWE-agent, AutoCodeRover, Aider — all follow the
+same broad recipe: one strong model both **generates** a solution and **debugs** its
+own mistakes. This works, up to a point. But when we studied failure cases on hard
+competitive programming problems, we noticed two recurring pathologies:
+
+1. **Self-consistency traps.** A model that wrote a wrong solution rarely
+   diagnoses *why* the solution is wrong. Instead it makes cosmetic edits and
+   re-submits the same broken logic.
+2. **Error repetition.** Across iterations, the same misconception (off-by-one,
+   overflow, wrong greedy) resurfaces because the model has no persistent
+   memory of what it has already tried.
+
+Our new paper — **[A-ProS: Towards Reliable Autonomous Programming Through
+Multi-Model Feedback](https://arxiv.org/abs/2605.18073)** (Tabassum, Hossain et
+al., **ACM TOSEM 2026**) — is a systematic study of both problems. The core
+architectural claim: **separating the *generation* and *debugging* roles across
+different model families, connected by a persistent feedback state, substantially
+improves autonomous programming reliability.**
+
+## Architectural insight: split generation and debugging
+
+A-ProS is deliberately not one big agent. It is a small system with three parts:
+
+- **Generator.** A strong general-purpose model — we evaluated **GPT-4** and
+  **GPT-5** — proposes a candidate solution given the problem statement.
+- **Judge.** The candidate is submitted to the Codeforces judge, which returns
+  an exact verdict (*Wrong Answer*, *Time Limit Exceeded*, *Runtime Error*,
+  *Compilation Error*, or *Accepted*), plus test-level diagnostic information.
+- **Critic.** A *different* model family — we evaluated **DeepSeek-R1**,
+  **Llama-3.3**, and **Codestral** — inspects the failing candidate and the
+  verdict, and produces structured debugging feedback: a hypothesis about the
+  bug, a suggested fix strategy, and a confidence score.
+
+The generator then receives the critic's feedback plus a **persistent trace**
+of every hypothesis, patch, and verdict from prior iterations. This is the
+key architectural knob: is the generator stateful across iterations, or does
+it start fresh each time?
+
+## Evaluation: 2×3 factorial design over 367 problems
+
+To measure the contribution of each component, we ran a **2×3 factorial
+design**:
+
+- **2 generator models:** GPT-4, GPT-5.
+- **3 critic models:** DeepSeek-R1, Llama-3.3, Codestral.
+- **Ablation axis:** stateful (persistent trace) vs. stateless (fresh context
+  each iteration).
+
+The benchmark: **367 ICPC and Codeforces problems**, extending the 166-problem
+ICPC dataset from our prior work
+([LLM-ProS, ICSE 2025](/blog/llm-pros-benchmarking-llms-competitive-programming))
+with 200+ additional Codeforces problems chosen to span difficulty ratings
+1200-2800 and multiple algorithmic categories (DP, graphs, math, geometry,
+strings, ad hoc).
+
+All submissions were auto-filed to the Codeforces judge via a Selenium +
+Playwright pipeline. Every verdict, runtime, memory reading, and iteration
+count was logged to SQLite for reproducible analysis.
+
+## The results: stateful multi-model feedback is 2.2-2.3× more effective
+
+Two headline numbers:
+
+- **Stateful refinement achieves 2.2-2.3× greater gains** in solve rate per
+  additional iteration compared to stateless baselines, across both GPT-4
+  and GPT-5 as generators.
+- **Error repetition drops by 2.9-3.5×** when the generator has access to
+  the persistent trace of prior hypotheses. Without the trace, the same
+  bug returns iteration after iteration.
+
+Combined, these two effects mean that a multi-model feedback loop with
+persistent state converges toward correct solutions substantially faster,
+using fewer total inference calls than either self-debugging or stateless
+multi-model debugging.
+
+## Trust calibration across critic models
+
+Because A-ProS uses a *different* model family as the critic, we can ask a
+question that single-model agents cannot: **when the critic says its
+diagnosis is likely correct, is it actually correct?**
+
+We compute **Expected Calibration Error (ECE)** for each critic model over
+its self-reported confidence scores. The result is not uniform:
+
+- **DeepSeek-R1** is the best-calibrated critic — its high-confidence
+  diagnoses land on the true root cause most often.
+- **Llama-3.3** is well-calibrated on structural bugs (wrong data structure,
+  wrong recurrence) but overconfident on edge-case bugs.
+- **Codestral** is faster and cheaper but more overconfident overall.
+
+This has practical implications for anyone building agentic systems: **choose
+the critic to match the failure mode you expect**, and consider ensembling
+critic outputs weighted by per-class calibration.
+
+## Why this matters beyond competitive programming
+
+A-ProS is evaluated on competitive programming because the judge is exact and
+adversarial, but the architectural pattern generalizes:
+
+- **SWE-bench-style repository bug fixing** already benefits from separating
+  fault localization from patch generation (see IBM's iSWE-Agent). A-ProS's
+  contribution is showing that the *critic itself* should be a different
+  model family, and that its feedback needs to be *persistent* across
+  iterations.
+- **Retrieval-augmented autonomous debugging** can drop A-ProS in as the
+  refinement backbone: retrieval finds candidate code, generator patches,
+  critic verifies against tests, persistent trace prevents loops.
+- **Multi-agent LLM research more broadly** is moving from *ensembles of
+  identical calls* (Self-Consistency, Tree-of-Thoughts) toward *ensembles
+  of specialized roles*. A-ProS quantifies why specialization helps.
+
+## Try it, cite it
+
+- **Paper (arXiv):** [arxiv.org/abs/2605.18073](https://arxiv.org/abs/2605.18073)
+- **DOI (ACM TOSEM):** [10.1145/3820891](https://dl.acm.org/doi/10.1145/3820891)
+- **Project page:** [sifat-hossain-niloy.github.io/A-Pros](https://sifat-hossain-niloy.github.io/A-Pros/)
+- **Code:** [github.com/sifat-hossain-niloy/A-Pros](https://github.com/sifat-hossain-niloy/A-Pros)
+- **Prior work:** [LLM-ProS: benchmarking LLMs on ICPC World Finals](/blog/llm-pros-benchmarking-llms-competitive-programming)
+
+If A-ProS informs your work on **multi-model LLM agents**, **autonomous
+software engineering**, **agentic debugging**, or **feedback loop
+architectures**, please cite:
+
+```bibtex
+@article{tabassum2026apros,
+  title   = {A-ProS: Towards Reliable Autonomous Programming Through Multi-Model Feedback},
+  author  = {Tabassum, Anika and Hossain, Md Sifat and Arefin, Md. Fahim and Islam, Tariqul and Zaman, Tarannum Shaila},
+  journal = {ACM Transactions on Software Engineering and Methodology (TOSEM)},
+  year    = {2026},
+  publisher = {ACM},
+  eprint  = {2605.18073},
+  archivePrefix = {arXiv}
+}
+```
+
+See my [full publications list](/publications) for related work, or reach out
+by email if you would like to collaborate on cross-language agentic debugging
+— our current ongoing research direction extends A-ProS to polyglot codebases
+targeting **ICSE / FSE 2027**.
