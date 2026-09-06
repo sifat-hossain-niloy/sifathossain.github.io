@@ -90,6 +90,10 @@ export default function Home() {
             <span className="font-sans text-sm text-ink-faint dark:text-neutral-500">{education.start} - {education.end}</span>
           </div>
           <p className="font-sans text-sm text-ink-muted dark:text-neutral-400 mt-1">{education.degree} · CGPA {education.cgpa}</p>
+          <p className="font-sans text-sm text-ink-muted dark:text-neutral-400 mt-1">
+            IELTS Academic · Overall <span className="font-semibold text-ink dark:text-neutral-200">{education.ielts.overall}</span>{' '}
+            <span className="text-ink-faint dark:text-neutral-500">({education.ielts.breakdown})</span>
+          </p>
           <div className="mt-4 border-l-2 border-ink/10 dark:border-neutral-700 pl-4">
             <div className="subhead mb-1">Undergraduate Thesis</div>
             <p className="font-serif italic">{education.thesis.title}</p>

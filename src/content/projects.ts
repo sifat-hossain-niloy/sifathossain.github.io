@@ -67,6 +67,10 @@ export const education = {
   school: 'University of Dhaka',
   degree: 'Bachelor of Science in Computer Science and Engineering',
   cgpa: '3.13 / 4.00',
+  ielts: {
+    overall: '7.5',
+    breakdown: 'L 8.5 · R 7.5 · W 6.5 · S 6.5',
+  },
   start: 'Jan 2020',
   end: 'Feb 2025',
   thesis: {
