@@ -8,11 +8,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'Polyglot Codebase Debugging (Ongoing)',
+    name: 'Cross-Language Bug Localization & Repair in Polyglot Repositories',
     stack: 'LLM Agents · SCIP · tree-sitter · Java · TypeScript · Python · Go',
     kind: 'research',
     description:
-      'Ongoing research on cross-language fault localization and program repair for polyglot codebases - targeting the Java+TypeScript and Python+Go enterprise stacks where LLM agents drop from ~80% to 10-33% resolution. Building a localize-then-edit agent that unifies SCIP-based cross-language call graphs with REST/gRPC schema reasoning, extending IBM iSWE-style AST tooling across language boundaries. Empirical taxonomy of cross-language bug root causes plus systems evaluation on SWE-PolyBench and xCodeEval; targeting ICSE / FSE 2027.',
+      'Agentic approach to localizing and repairing bugs that cross language boundaries in Java-TypeScript and Python-Go repositories, where LLM agents otherwise drop sharply from their single-language performance. Built on a mined corpus of confirmed cross-language bug fixes and a unified SCIP-based navigation graph with thousands of boundary edges (~90% estimated precision), combined with contract checking and compilation, lint, and test feedback. Also documents information leakage through Git history, caches, and network access as a threat to reliable agent evaluation.',
   },
   {
     name: 'A-ProS',
