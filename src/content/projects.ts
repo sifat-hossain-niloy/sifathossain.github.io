@@ -12,7 +12,7 @@ export const projects: Project[] = [
     stack: 'LLM Agents · SCIP · tree-sitter · Java · TypeScript · Python · Go',
     kind: 'research',
     description:
-      'Agentic approach to localizing and repairing bugs that cross language boundaries in Java-TypeScript and Python-Go repositories, where LLM agents otherwise drop sharply from their single-language performance. Built on a mined corpus of confirmed cross-language bug fixes and a unified SCIP-based navigation graph with thousands of boundary edges (~90% estimated precision), combined with contract checking and compilation, lint, and test feedback. Also documents information leakage through Git history, caches, and network access as a threat to reliable agent evaluation.',
+      'Agentic approach to localizing and repairing bugs that cross language boundaries in Java-TypeScript and Python-Go repositories, where LLM agents otherwise drop sharply from their single-language performance. Built on a mined corpus of confirmed cross-language bug fixes and a unified SCIP-based navigation graph with thousands of boundary edges (~90% estimated precision), combined with contract checking and compilation, lint, and test feedback. Also documents information leakage through Git history, caches, and network access as a threat to reliable agent evaluation. Paper submitted to a top-tier software engineering conference (under review).',
   },
   {
     name: 'A-ProS',
