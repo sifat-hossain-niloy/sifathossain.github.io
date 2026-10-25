@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   kind: 'research' | 'software';
   link?: string;
+  figure?: { src: string; alt: string; caption: string };
 };
 
 export const projects: Project[] = [
@@ -13,6 +14,12 @@ export const projects: Project[] = [
     kind: 'research',
     description:
       'Agentic approach to localizing and repairing bugs that cross language boundaries in Java-TypeScript and Python-Go repositories, where LLM agents otherwise drop sharply from their single-language performance. Built on a mined corpus of confirmed cross-language bug fixes and a unified SCIP-based navigation graph with thousands of boundary edges (~90% estimated precision), combined with contract checking and compilation, lint, and test feedback. Also documents information leakage through Git history, caches, and network access as a threat to reliable agent evaluation. Paper submitted to a top-tier software engineering conference (under review).',
+    figure: {
+      src: '/Polyglot-Overview.png',
+      alt: 'Three-panel overview. (a) Corpus construction narrows GitHub repositories to merged pull requests, candidates, confirmed cross-language bug fixes, and executable bugs. (b) A cross-language dependency graph links Language A and Language B through REST routes, HTTP headers, IPC signals, payload and enum types, and gRPC, built on SCIP and tree-sitter. (c) The agent pipeline inside a sandbox: localization agent, contract reasoning, editing agent, validation gate, and feedback tests, with failures routed back by side and scoring hidden from the agent.',
+      caption:
+        'Overview of the study: (a) corpus construction, (b) the cross-language dependency graph, and (c) the localize-then-edit agent pipeline, run inside a sandbox with hidden scoring.',
+    },
   },
   {
     name: 'A-ProS',

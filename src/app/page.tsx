@@ -273,6 +273,20 @@ function ProjectList({ items }: { items: typeof projects }) {
             <span className="font-mono text-xs text-ink-faint dark:text-neutral-500">{p.stack}</span>
           </div>
           <p className="mt-1.5 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-300">{p.description}</p>
+          {p.figure && (
+            <figure className="mt-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset(p.figure.src)}
+                alt={p.figure.alt}
+                loading="lazy"
+                className="w-full max-w-3xl rounded-sm border border-ink/10 dark:border-neutral-800 bg-white"
+              />
+              <figcaption className="mt-1.5 text-xs font-sans text-ink-faint dark:text-neutral-500 max-w-3xl">
+                {p.figure.caption}
+              </figcaption>
+            </figure>
+          )}
           {p.link && (
             <a
               href={p.link}
