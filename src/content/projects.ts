@@ -63,22 +63,6 @@ export const projects: Project[] = [
       'Anonymous professor and course review platform for Bangladeshi universities, the equivalent of RateMyProfessors for a country it does not cover. Reading is public; Google sign-in is required to review or vote, yet the reviews table stores no user ID and a separate submissions table only enforces one review per account per course, so authorship cannot be joined back to a review. Includes a 161-university catalog with crowdsourced departments and university requests, helpful votes, abuse reports, super-admin / admin / moderator roles with audit logging, and Vitest and Playwright test suites.',
   },
   {
-    name: 'CF Coach',
-    stack: 'FastAPI · PostgreSQL · React · nginx · Docker Compose',
-    kind: 'software',
-    link: 'https://github.com/sifat-hossain-niloy/cf-coach',
-    description:
-      'Public Codeforces training dashboard: enter a handle to get weak-tag analysis, rating-band breakdown, a daily upsolve queue, and progress toward the next rank, all from the public Codeforces API with no account needed. A single worker process is the only component that talks to Codeforces.',
-  },
-  {
-    name: 'VocalizePro',
-    stack: 'React · FastAPI · LangChain · FAISS · SQLite',
-    kind: 'software',
-    link: 'https://github.com/sifat-hossain-niloy/VocalizePro',
-    description:
-      'Chatbot that shares technical knowledge on a factory floor: admins upload PDFs, the text is indexed with LangChain and FAISS, and answers are returned as text and audio for workers who find dense documents hard to read. Admin-validated user accounts.',
-  },
-  {
     name: 'Wok and Fire',
     stack: 'React · Redux · FastAPI · PostgreSQL · Firebase · Stripe',
     kind: 'software',
