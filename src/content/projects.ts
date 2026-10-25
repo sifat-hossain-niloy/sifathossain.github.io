@@ -39,6 +39,54 @@ export const projects: Project[] = [
       'Scraper extracting video descriptions and author metadata for specified keywords and tags, enabling structured analysis across 5,000+ videos. Selenium for dynamic rendering, BeautifulSoup for parsing, SQLite3 for storage - the same scraping architecture later applied in the LLM benchmark pipeline.',
   },
   {
+    name: 'CF-Live - Contamination-Resistant Codeforces Evaluation',
+    stack: 'Python · Docker · Codeforces · static leaderboard',
+    kind: 'research',
+    link: 'https://github.com/sifat-hossain-niloy/cp-live-benchmark',
+    description:
+      'Evaluation infrastructure for LLM competitive programming that avoids training-data contamination by using only newly released Codeforces problems, reviewed private tests, sandboxed Docker execution, and a static public leaderboard. Currently an infrastructure preview rather than a finished benchmark: the first collection found 94 candidate problems and prepared private draft problem directories, and no model scores are published yet.',
+  },
+  {
+    name: 'Grammar-Seeded Agentic Fuzzer for tomlc99',
+    stack: 'Python · Hypothesis · C · AddressSanitizer · UBSan',
+    kind: 'research',
+    link: 'https://github.com/sifat-hossain-niloy/agentic-fuzzing',
+    description:
+      'Fuzzer for a C TOML parser that uses no coverage instrumentation: a language model reads the formal TOML grammar, writes a Hypothesis input strategy, and refines it over five iterations from run measurements, with sanitizers as the crash oracle. Also measured where the grammar and the parser disagree and surfaced a conformance bug in how the parser validates lowercase hex escapes.',
+  },
+  {
+    name: 'Poray Kemon (পড়ায় কেমন)',
+    stack: 'Next.js 15 · TypeScript · PostgreSQL · Prisma · Redis · NextAuth · Tailwind · Docker',
+    kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/poray-kemon',
+    description:
+      'Anonymous professor and course review platform for Bangladeshi universities, the equivalent of RateMyProfessors for a country it does not cover. Reading is public; Google sign-in is required to review or vote, yet the reviews table stores no user ID and a separate submissions table only enforces one review per account per course, so authorship cannot be joined back to a review. Includes a 161-university catalog with crowdsourced departments and university requests, helpful votes, abuse reports, super-admin / admin / moderator roles with audit logging, and Vitest and Playwright test suites.',
+  },
+  {
+    name: 'CF Coach',
+    stack: 'FastAPI · PostgreSQL · React · nginx · Docker Compose',
+    kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/cf-coach',
+    description:
+      'Public Codeforces training dashboard: enter a handle to get weak-tag analysis, rating-band breakdown, a daily upsolve queue, and progress toward the next rank, all from the public Codeforces API with no account needed. A single worker process is the only component that talks to Codeforces.',
+  },
+  {
+    name: 'VocalizePro',
+    stack: 'React · FastAPI · LangChain · FAISS · SQLite',
+    kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/VocalizePro',
+    description:
+      'Chatbot that shares technical knowledge on a factory floor: admins upload PDFs, the text is indexed with LangChain and FAISS, and answers are returned as text and audio for workers who find dense documents hard to read. Admin-validated user accounts.',
+  },
+  {
+    name: 'Wok and Fire',
+    stack: 'React · Redux · FastAPI · PostgreSQL · Firebase · Stripe',
+    kind: 'software',
+    link: 'https://github.com/sifat-hossain-niloy/Wok-and-Fire',
+    description:
+      'Full-stack restaurant ordering and management app with menu management, Firebase authentication, and Stripe payments.',
+  },
+  {
     name: 'Smart Event Ticketing System',
     stack: 'Java · Spring MVC · Hibernate/JPA · PostgreSQL · JSP',
     kind: 'software',

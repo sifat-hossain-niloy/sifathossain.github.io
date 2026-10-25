@@ -18,7 +18,7 @@ export const research: Role[] = [
     end: 'Present',
     kind: 'research',
     supervisor:
-      'Md. Fahim Arefin (DU CSE), in collaboration with Prof. Tarannum Shaila Zaman (UMBC, Information Systems).',
+      'Md. Fahim Arefin (Assistant Professor, DU CSE), in collaboration with Prof. Tarannum Shaila Zaman (UMBC, Information Systems).',
     bullets: [
       'Designed and implemented LLM-ProS, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a 166-problem dataset (2011-2024), built automated submission pipelines via Codeforces Gym, and analyzed five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning. Published at ICSE 2025 (LLM4Code).',
       'Extended this work into A-ProS, an autonomous multi-model agentic framework that separates solution generation from specialized debugging feedback under a 2×3 factorial design. Developed the full orchestration pipeline, Codeforces browser automation (Selenium + Playwright), verdict capture, and SQLite logging. Ran ablations on persistent vs. stateless context and trust calibration (ECE) across critic models. Accepted at ACM TOSEM 2026.',
