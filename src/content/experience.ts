@@ -27,6 +27,21 @@ export const research: Role[] = [
     ],
   },
   {
+    org: 'micro1',
+    title: 'Competitive Coder Expert & Software Engineer',
+    location: 'Remote',
+    start: 'Jun 2025',
+    end: 'Present',
+    kind: 'research',
+    bullets: [
+      'Authored and reviewed 100+ competitive-programming tasks end-to-end - problem statements, editorials, reference solutions, and decoupled JSON test suites validated against a brute-force oracle - through a custom evaluation toolchain with sandboxed, privilege-separated Docker verifiers, at 100% accuracy.',
+      'Calibrated problems to defeat frontier models (target avg@8 ≤ 0.4), enforcing originality through embedding-similarity gates and hardening hidden tests against hackable edge cases; maintained authoring standards and reusable templates across the C++ and Python corpus.',
+      'Completed 100+ frontend engineering evaluation tasks for a top AI lab at 94.8% accuracy, running assigned frontier models against real repositories, validating rendered output, and capturing full model reasoning traces.',
+      'Authored 80+ containerized, terminal-based reinforcement-learning environments with hidden automated verifiers, grounded in real-world operational and regulatory workflows, with difficulty calibrated against frontier-model pass rates.',
+      'Built long-horizon cloud-infrastructure environments in which an agent must deploy, repair, and tear down a multi-service system with infrastructure as code (Terraform/OpenTofu), scored on the live system, fault behaviour, and cleanup.',
+    ],
+  },
+  {
     org: 'Turing Enterprises Inc.',
     title: 'RLHF Data Researcher & Pod Lead',
     location: 'Remote',
@@ -37,18 +52,6 @@ export const research: Role[] = [
       'Contributed to Reinforcement Learning from Human Feedback (RLHF) data creation supporting large-scale AI model alignment research, focusing on dataset quality, consistency, and annotation methodology for code and reasoning tasks.',
       'Led a team of 10, establishing quality control protocols that ensured annotation reliability across diverse task domains.',
       'Coordinated cross-functional team activities and maintained consistency standards critical to downstream model training, directly supporting AI alignment objectives.',
-    ],
-  },
-  {
-    org: 'Brainwave Matrix Solutions',
-    title: 'Machine Learning Research Intern',
-    location: 'Remote, India',
-    start: 'Aug 2024',
-    end: 'Sep 2024',
-    kind: 'research',
-    bullets: [
-      'Developed a fraud detection model applying anomaly detection and supervised learning on imbalanced datasets, achieving 85% precision. Investigated model behavior under class imbalance and precision-recall trade-offs.',
-      'Automated model training and deployment pipelines using Docker and Jenkins, enabling reproducible ML experimentation and continuous integration of model updates.',
     ],
   },
 ];
