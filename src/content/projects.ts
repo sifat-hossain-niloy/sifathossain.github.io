@@ -111,7 +111,7 @@ export const education = {
     breakdown: 'L 8.5 · R 7.5 · W 6.5 · S 6.5',
   },
   start: 'Jan 2020',
-  end: 'Feb 2025',
+  end: 'Aug 2026',
   thesis: {
     title:
       'A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows',
@@ -176,7 +176,7 @@ export const achievements = {
     },
     {
       title: 'Meta Hacker Cup 2024',
-      detail: 'Round 2 qualifier · global rank 2,166.',
+      detail: 'Round 2 qualifier · global rank 2,123.',
     },
     { title: 'NCPC 2023', detail: '44th of 198 teams.' },
   ],

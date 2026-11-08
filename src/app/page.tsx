@@ -242,16 +242,33 @@ function ExperienceList({ roles }: { roles: typeof research }) {
               Supervisor: {r.supervisor}
             </p>
           )}
-          <ul className="mt-3 space-y-2 text-[15px] leading-relaxed">
+          <ul className="mt-3 space-y-1.5 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-300">
             {r.bullets.map((b, i) => (
-              <li key={i} className="pl-5 relative before:content-['-'] before:absolute before:left-0 before:text-ink-faint">
-                {b}
+              <li key={i} className="pl-5 relative before:content-['•'] before:absolute before:left-1 before:text-accent dark:before:text-accent-dark">
+                <Rich text={b} />
               </li>
             ))}
           </ul>
         </article>
       ))}
     </div>
+  );
+}
+
+/** Renders `**bold**` spans inside a plain string. */
+function Rich({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+        part.startsWith('**') && part.endsWith('**') ? (
+          <strong key={i} className="font-semibold text-ink dark:text-neutral-100">
+            {part.slice(2, -2)}
+          </strong>
+        ) : (
+          part
+        ),
+      )}
+    </>
   );
 }
 

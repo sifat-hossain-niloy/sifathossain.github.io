@@ -9,7 +9,25 @@ export type Role = {
   supervisor?: string;
 };
 
+// Bullets support **bold** for emphasis (rendered by ExperienceList in src/app/page.tsx).
 export const research: Role[] = [
+  {
+    org: 'RISE Lab (Reliable and Intelligent Software Engineering), UMBC',
+    title: 'Remote Research Intern',
+    location: 'Remote',
+    start: 'Sep 2024',
+    end: 'Present',
+    kind: 'research',
+    supervisor:
+      'Tarannum Shaila Zaman (Assistant Professor, Dept. of Information Systems, UMBC)',
+    bullets: [
+      '**Polyglot debugging:** an agentic approach to cross-language bug localization and repair in **Java+TypeScript** and **Python+Go** repositories.',
+      'Mined **100+ GitHub repositories** to build a corpus of confirmed cross-language bug fixes.',
+      'Built a **SCIP-based cross-language navigation graph** with **~90% precision**.',
+      'Paper **under review** at a top-tier software engineering conference.',
+      'Also contributed to **LLM-ProS** and **A-ProS**.',
+    ],
+  },
   {
     org: 'Data Mining Research Lab, University of Dhaka',
     title: 'Research Assistant',
@@ -17,13 +35,14 @@ export const research: Role[] = [
     start: 'Aug 2023',
     end: 'Present',
     kind: 'research',
-    supervisor:
-      'Md. Fahim Arefin (Assistant Professor, DU CSE), in collaboration with Prof. Tarannum Shaila Zaman (UMBC, Information Systems).',
+    supervisor: 'Md. Fahim Arefin (Assistant Professor, University of Dhaka)',
     bullets: [
-      'Designed and implemented LLM-ProS, a novel evaluation framework for benchmarking LLM performance on ICPC World Finals problems. Curated a 166-problem dataset (2011-2024), built automated submission pipelines via Codeforces Gym, and analyzed five state-of-the-art models across correctness, resource utilization, and chain-of-thought reasoning. Published at ICSE 2025 (LLM4Code).',
-      'Extended this work into A-ProS, an autonomous multi-model agentic framework that separates solution generation from specialized debugging feedback under a 2×3 factorial design. Developed the full orchestration pipeline, Codeforces browser automation (Selenium + Playwright), verdict capture, and SQLite logging. Ran ablations on persistent vs. stateless context and trust calibration (ECE) across critic models. Accepted at ACM TOSEM 2026.',
-      'Completed undergraduate thesis “A Hybrid LLM Feedback Framework for Automated Competitive Programming Workflows,” proposing an iterative test-driven benchmarking pipeline integrating OpenAI o3-mini with specialist LLMs (DeepSeek, Qwen) for error diagnosis and code refinement via Codeforces-based validation.',
-      'Polyglot Codebase Debugging and Cross-Language Program Repair - developed an agentic approach to cross-language bug localization and repair in polyglot repositories (Java+TypeScript and Python+Go). Mined 100+ GitHub repositories for a corpus of confirmed cross-language bug fixes, built a unified SCIP-based cross-language navigation graph with thousands of boundary edges (~90% estimated precision) that combines with contract checking and compile, lint, and test feedback, and evaluated localization, repair, and ablations in leakage-audited sandboxes. Paper submitted to a top-tier software engineering conference (under review).',
+      '**LLM-ProS** · **ICSE 2025** (LLM4Code): benchmark of **166 ICPC World Finals problems** (2011-2024) with automated Codeforces Gym submission.',
+      'Compared **five state-of-the-art LLMs** on correctness, resource use, and reasoning.',
+      '**A-ProS** · **ACM TOSEM 2026**: a multi-model agentic framework that separates solution generation from debugging feedback.',
+      'Built the **orchestration pipeline**, Codeforces browser automation, and verdict logging.',
+      'Ran ablations on **persistent vs. stateless context** and **critic calibration (ECE)**.',
+      '**Thesis:** a test-driven pipeline pairing **OpenAI o3-mini** with specialist LLMs (**DeepSeek, Qwen**) to diagnose and fix code.',
     ],
   },
   {
@@ -34,11 +53,12 @@ export const research: Role[] = [
     end: 'Present',
     kind: 'research',
     bullets: [
-      'Authored and reviewed 100+ competitive-programming tasks end-to-end - problem statements, editorials, reference solutions, and decoupled JSON test suites validated against a brute-force oracle - through a custom evaluation toolchain with sandboxed, privilege-separated Docker verifiers, at 100% accuracy.',
-      'Calibrated problems to defeat frontier models (target avg@8 ≤ 0.4), enforcing originality through embedding-similarity gates and hardening hidden tests against hackable edge cases; maintained authoring standards and reusable templates across the C++ and Python corpus.',
-      'Completed 100+ frontend engineering evaluation tasks for a top AI lab at 94.8% accuracy, running assigned frontier models against real repositories, validating rendered output, and capturing full model reasoning traces.',
-      'Authored 80+ containerized, terminal-based reinforcement-learning environments with hidden automated verifiers, grounded in real-world operational and regulatory workflows, with difficulty calibrated against frontier-model pass rates.',
-      'Built long-horizon cloud-infrastructure environments in which an agent must deploy, repair, and tear down a multi-service system with infrastructure as code (Terraform/OpenTofu), scored on the live system, fault behaviour, and cleanup.',
+      'Authored and reviewed **100+ competitive-programming tasks** end-to-end: statements, editorials, reference solutions, and test suites.',
+      'Validated tests against **brute-force oracles** in sandboxed Docker verifiers; calibrated tasks to **defeat frontier models** (avg@8 ≤ 0.4).',
+      'Completed **100+ frontend evaluation tasks** for a top AI lab at **94.8% accuracy**.',
+      'Authored **80+ containerized RL environments** with hidden automated verifiers, calibrated against frontier-model pass rates.',
+      'Built **long-horizon cloud-infrastructure tasks**: an agent deploys, repairs, and tears down a multi-service system with **Terraform/OpenTofu**, scored on the live system.',
+      'Consistently ranked **#1 on the contributor leaderboard** for accuracy and throughput.',
     ],
   },
   {
@@ -46,12 +66,12 @@ export const research: Role[] = [
     title: 'RLHF Data Researcher & Pod Lead',
     location: 'Remote',
     start: 'Jul 2025',
-    end: 'Dec 2025',
+    end: 'Present',
     kind: 'research',
     bullets: [
-      'Contributed to Reinforcement Learning from Human Feedback (RLHF) data creation supporting large-scale AI model alignment research, focusing on dataset quality, consistency, and annotation methodology for code and reasoning tasks.',
-      'Led a team of 10, establishing quality control protocols that ensured annotation reliability across diverse task domains.',
-      'Coordinated cross-functional team activities and maintained consistency standards critical to downstream model training, directly supporting AI alignment objectives.',
+      'Created **RLHF data** for large-scale AI model alignment, focused on **code and reasoning tasks**.',
+      'Owned dataset quality, consistency, and annotation methodology.',
+      '**Pod lead for a team of 10**: set quality-control protocols and consistency standards for downstream model training.',
     ],
   },
 ];
@@ -65,8 +85,9 @@ export const industry: Role[] = [
     end: 'Present',
     kind: 'industry',
     bullets: [
-      'Develop and maintain scalable features for Therap’s EHR SaaS platform (used across all 50 US states) using Java, Spring, Hibernate, JSP, and Oracle DB, with a focus on correctness and reliability under HIPAA constraints.',
-      'Build and containerize full-stack modules using React.js and Docker, deployed on WebLogic Server, contributing to platform stability and consistent delivery across environments.',
+      'Build and maintain features for Therap’s **EHR SaaS platform**, used across **50 US states**.',
+      'Stack: **Java, Spring, Hibernate, JSP, Oracle DB**, with a focus on correctness and reliability under **HIPAA** compliance.',
+      'Build and containerize full-stack modules with **React** and **Docker**, deployed on **WebLogic Server**.',
     ],
   },
   {
@@ -77,8 +98,8 @@ export const industry: Role[] = [
     end: 'Jun 2024',
     kind: 'industry',
     bullets: [
-      'Built and deployed scalable web applications for 5+ clients using React.js and FastAPI, significantly reducing average page load times through targeted performance optimization.',
-      'Architected CI/CD pipelines with automated testing and deployment workflows on AWS (EC2, S3, RDS), accelerating release cycles while maintaining production code quality.',
+      'Built and deployed web applications for **5+ clients** with **React** and **FastAPI**.',
+      'Set up **CI/CD pipelines** with automated testing on **AWS** (EC2, S3, RDS).',
     ],
   },
 ];
