@@ -45,7 +45,7 @@ export default function Home() {
       <section id="about" className="scroll-mt-24">
         <h2 className="section-title">About</h2>
         <div className="space-y-4 text-[16px] leading-relaxed text-ink dark:text-neutral-200">
-          {bio.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+          {bio.split('\n\n').map((p, i) => <p key={i}><Rich text={p} /></p>)}
         </div>
         <div className="mt-6">
           <div className="subhead mb-3">Research interests</div>
