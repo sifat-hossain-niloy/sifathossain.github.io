@@ -72,6 +72,9 @@ export const research: Role[] = [
       'Created **RLHF data** for large-scale AI model alignment, focused on **code and reasoning tasks**.',
       'Owned dataset quality, consistency, and annotation methodology.',
       '**Pod lead for a team of 10**: set quality-control protocols and consistency standards for downstream model training.',
+      '**Benchmark project for a frontier AI lab:** authored and calibrated **49 containerized agentic-evaluation tasks**, pairing realistic multi-file workspaces with deterministic verifiers (**15-80 assertions** each).',
+      'Tuned task difficulty to a **25-75% pass band** across four-rollout batteries.',
+      'Wrote **9 standards documents** and a **~490-line Python validation gate** that checked all 49 task packages for integrity defects before delivery.',
     ],
   },
 ];
