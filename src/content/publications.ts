@@ -5,10 +5,10 @@ export type Publication = {
   venue: string;
   venueShort: string;
   year: number;
-  status: 'published' | 'under-review';
+  status: 'published' | 'under-review' | 'manuscript';
   links?: { label: string; href: string }[];
   abstract: string;
-  bibtex: string;
+  bibtex?: string;
   highlight?: boolean;
   note?: string;
   figure?: { src: string; alt: string };
@@ -83,5 +83,35 @@ export const publications: Publication[] = [
   eprint    = {2502.04355},
   archivePrefix = {arXiv}
 }`,
+  },
+];
+
+// Work not yet under review. Keep `venue` honest: say "to be submitted" until the
+// submission is made, then switch status to 'under-review'. Double-anonymous venues
+// are not named here while the paper is in review.
+export const manuscripts: Publication[] = [
+  {
+    id: 'rr-msr-2027',
+    title:
+      'Do Explicit Architecture Decisions Help LLMs Keep Cross-Language Interface Contracts Consistent? A Registered Report',
+    authors: 'Md Sifat Hossain, Rick Kazman',
+    venue: 'Stage 1 Registered Report, MSR 2027 Registered Reports Track · to be submitted November 2026',
+    venueShort: 'MSR 2027 Registered Report',
+    year: 2026,
+    status: 'manuscript',
+    abstract:
+      'A confirmatory study of whether an LLM keeps interface contracts that cross language boundaries (REST routes and payload schemas, gRPC services, native-call signatures) consistent more often when it is given the architecture decision explicitly, or a cross-language dependency graph. Tasks come from real change requests in open-source Java/TypeScript and Python/Go projects and run under three conditions (code only, code plus decision, code plus graph) with DeepSeek-V4.1-Flash and Claude Sonnet 5.5, in a sandbox without network or history. A contract-consistency oracle, the project\u2019s build and tests, and two raters judge each change; a simulation-based power analysis sets the sample size.',
+  },
+  {
+    id: 'code-or-test-2026',
+    title:
+      'Code or Test? A Pre-registered Study of Which Artifact Language Models Side With When a Unit Test Fails',
+    authors: 'Md Sifat Hossain, Md. Fahim Arefin',
+    venue: 'Manuscript · to be submitted November 2026',
+    venueShort: 'Pre-registered study',
+    year: 2026,
+    status: 'manuscript',
+    abstract:
+      'When a unit test fails, either the code or the test is wrong, and a coding agent has to choose which to change. We introduce mirrored pairs: two versions of one failure that show the same call and the same two values, one with the code at fault and one with the test at fault. In a pre-registered study, six models act as judge and fixer on up to 989 pairs. With the specification shown, all six almost always name the faulty artifact, but how the repair request is worded matters far more than the step from judging to fixing. Measurements of test tampering should report how the request is worded and what the specification determines.',
   },
 ];

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { profile, bio } from '@/content/profile';
-import { publications } from '@/content/publications';
+import { publications, manuscripts } from '@/content/publications';
 import { research, industry, leadership, mentees, menteesSummary } from '@/content/experience';
 import { projects, education, achievements, skills } from '@/content/projects';
 import { PublicationItem } from '@/components/publication-item';
@@ -63,6 +63,10 @@ export default function Home() {
         </p>
         <ol className="ref-list">
           {publications.map((p) => <PublicationItem key={p.id} pub={p} />)}
+        </ol>
+        <div className="subhead mt-2 mb-4">Manuscripts</div>
+        <ol className="ref-list ref-list-m">
+          {manuscripts.map((p) => <PublicationItem key={p.id} pub={p} />)}
         </ol>
       </section>
 

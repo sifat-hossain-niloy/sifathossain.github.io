@@ -11,7 +11,7 @@ export function PublicationItem({ pub }: { pub: Publication }) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(pub.bibtex);
+    await navigator.clipboard.writeText(pub.bibtex ?? '');
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
@@ -51,6 +51,7 @@ export function PublicationItem({ pub }: { pub: Publication }) {
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-sans">
         <span className="chip">{pub.venueShort}</span>
         {pub.status === 'under-review' && <span className="chip border-accent/40 text-accent dark:border-accent-dark/50 dark:text-accent-dark">Under review</span>}
+        {pub.status === 'manuscript' && <span className="chip border-accent/40 text-accent dark:border-accent-dark/50 dark:text-accent-dark">Manuscript</span>}
         {pub.links?.map((l) => (
           <a key={l.href} className="link" href={l.href} target="_blank" rel="noreferrer">
             {l.label}
@@ -63,13 +64,15 @@ export function PublicationItem({ pub }: { pub: Publication }) {
         >
           Abstract <ChevronDown size={12} className={showAbstract ? 'rotate-180 transition' : 'transition'} />
         </button>
-        <button
-          type="button"
-          className="link inline-flex items-center gap-1"
-          onClick={() => setShowBibtex((s) => !s)}
-        >
-          BibTeX <ChevronDown size={12} className={showBibtex ? 'rotate-180 transition' : 'transition'} />
-        </button>
+        {pub.bibtex && (
+          <button
+            type="button"
+            className="link inline-flex items-center gap-1"
+            onClick={() => setShowBibtex((s) => !s)}
+          >
+            BibTeX <ChevronDown size={12} className={showBibtex ? 'rotate-180 transition' : 'transition'} />
+          </button>
+        )}
       </div>
       {showAbstract && (
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-400 border-l-2 border-ink/10 dark:border-neutral-700 pl-4">

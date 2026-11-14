@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { publications } from '@/content/publications';
+import { publications, manuscripts } from '@/content/publications';
 import { PublicationItem } from '@/components/publication-item';
 import { ScholarBadge } from '@/components/scholar-badge';
 
@@ -15,6 +15,10 @@ export default function PublicationsPage() {
       <div className="mt-5"><ScholarBadge /></div>
       <ol className="ref-list mt-10">
         {publications.map((p) => <PublicationItem key={p.id} pub={p} />)}
+      </ol>
+      <h2 className="subhead mt-2 mb-4">Manuscripts</h2>
+      <ol className="ref-list ref-list-m">
+        {manuscripts.map((p) => <PublicationItem key={p.id} pub={p} />)}
       </ol>
     </article>
   );
