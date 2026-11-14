@@ -21,7 +21,7 @@ export const research: Role[] = [
     supervisor:
       'Tarannum Shaila Zaman (Assistant Professor, Dept. of Information Systems, UMBC)',
     bullets: [
-      '**Polyglot debugging:** an agentic approach to cross-language bug localization and repair in **Java+TypeScript** and **Python+Go** repositories.',
+      '**Polyglot debugging:** LLM agents that find and fix bugs spanning **Java+TypeScript** and **Python+Go** code.',
       'Mined **100+ GitHub repositories** to build a corpus of confirmed cross-language bug fixes.',
       'Built a **SCIP-based cross-language navigation graph** with **~90% precision**.',
       'Paper **under review** at a top-tier software engineering conference.',

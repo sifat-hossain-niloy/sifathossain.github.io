@@ -9,7 +9,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'Cross-Language Bug Localization & Repair in Polyglot Repositories',
+    name: 'Polyglot Debugging: LLM Agents for Bugs Across Language Boundaries',
     stack: 'LLM Agents · SCIP · tree-sitter · Java · TypeScript · Python · Go',
     kind: 'research',
     description:

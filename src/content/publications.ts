@@ -86,14 +86,19 @@ export const publications: Publication[] = [
   },
 ];
 
-// Submitted manuscripts. All are treated as double-anonymous: never name the venue here
-// while a paper is in review (titles are fine; ICSE-style rules allow preprints).
+// Submitted manuscripts. Review policies checked 2026-11-14 on the official call pages:
+// - Polyglot paper: MSR 2027 Technical Track, double-anonymous. Authors must not say it was
+//   submitted to MSR 2027 and "should not publicly use the submission title" during review,
+//   so its title and tool name stay off this site until notification (8 Jan 2027).
+// - Registered Report: MSR 2027 Registered Reports, single-anonymous; venue may be named.
+// - Code or Test? (LLM4Code 2027) and CF-Live (FORGE 2027): double-anonymous, ICSE rules;
+//   titles may be public, but never say where they are under submission.
 export const manuscripts: Publication[] = [
   {
-    id: 'xlagent-2026',
-    title: 'XLAgent: Towards Cross-Language Bug Localization and Repair in Polyglot Repositories',
+    id: 'polyglot-2026',
+    title: 'LLM agents for bugs that span two programming languages (title withheld during review)',
     authors: 'Md Sifat Hossain, et al.',
-    venue: 'Manuscript submitted, October 2026',
+    venue: 'Under double-anonymous review since October 2026 · title withheld until January 2027',
     venueShort: 'Polyglot debugging',
     year: 2026,
     status: 'submitted',
@@ -105,8 +110,8 @@ export const manuscripts: Publication[] = [
     title:
       'Do Explicit Architecture Decisions Help LLMs Keep Cross-Language Interface Contracts Consistent? A Registered Report',
     authors: 'Md Sifat Hossain, Rick Kazman',
-    venue: 'Stage 1 Registered Report · manuscript submitted, November 2026',
-    venueShort: 'Registered Report',
+    venue: 'Stage 1 Registered Report, MSR 2027 Registered Reports Track · submitted November 2026',
+    venueShort: 'MSR 2027 Registered Report',
     year: 2026,
     status: 'submitted',
     abstract:
