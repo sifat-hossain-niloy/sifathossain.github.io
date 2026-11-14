@@ -121,7 +121,7 @@ export const manuscripts: Publication[] = [
     id: 'code-or-test-2026',
     title:
       'Code or Test? A Pre-registered Study of Which Artifact Language Models Side With When a Unit Test Fails',
-    authors: 'Md Sifat Hossain, Md. Fahim Arefin',
+    authors: 'Md Sifat Hossain, Nafiul Hasan, Md. Fahim Arefin, Tarannum Shaila Zaman',
     venue: 'Manuscript submitted, November 2026',
     venueShort: 'Pre-registered study',
     year: 2026,
@@ -132,7 +132,7 @@ export const manuscripts: Publication[] = [
   {
     id: 'cf-live-2026',
     title: 'CF-Live: What Gates Catch in a Post-Cutoff Competitive Programming Benchmark',
-    authors: 'Md Sifat Hossain, et al.',
+    authors: 'Md Sifat Hossain, Md. Fahim Arefin, Tarannum Shaila Zaman',
     venue: 'Benchmarking paper · manuscript submitted, November 2026',
     venueShort: 'Benchmark paper',
     year: 2026,
