@@ -51,7 +51,7 @@ export function PublicationItem({ pub }: { pub: Publication }) {
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-sans">
         <span className="chip">{pub.venueShort}</span>
         {pub.status === 'under-review' && <span className="chip border-accent/40 text-accent dark:border-accent-dark/50 dark:text-accent-dark">Under review</span>}
-        {pub.status === 'manuscript' && <span className="chip border-accent/40 text-accent dark:border-accent-dark/50 dark:text-accent-dark">Manuscript</span>}
+        {pub.status === 'submitted' && <span className="chip border-accent/40 text-accent dark:border-accent-dark/50 dark:text-accent-dark">Submitted</span>}
         {pub.links?.map((l) => (
           <a key={l.href} className="link" href={l.href} target="_blank" rel="noreferrer">
             {l.label}

@@ -5,7 +5,7 @@ export type Publication = {
   venue: string;
   venueShort: string;
   year: number;
-  status: 'published' | 'under-review' | 'manuscript';
+  status: 'published' | 'under-review' | 'submitted';
   links?: { label: string; href: string }[];
   abstract: string;
   bibtex?: string;
@@ -86,19 +86,29 @@ export const publications: Publication[] = [
   },
 ];
 
-// Work not yet under review. Keep `venue` honest: say "to be submitted" until the
-// submission is made, then switch status to 'under-review'. Double-anonymous venues
-// are not named here while the paper is in review.
+// Submitted manuscripts. All are treated as double-anonymous: never name the venue here
+// while a paper is in review (titles are fine; ICSE-style rules allow preprints).
 export const manuscripts: Publication[] = [
+  {
+    id: 'xlagent-2026',
+    title: 'XLAgent: Towards Cross-Language Bug Localization and Repair in Polyglot Repositories',
+    authors: 'Md Sifat Hossain, et al.',
+    venue: 'Manuscript submitted, October 2026',
+    venueShort: 'Polyglot debugging',
+    year: 2026,
+    status: 'submitted',
+    abstract:
+      'An agentic approach to localizing and repairing bugs that cross language boundaries (REST, gRPC and native calls) in Java-TypeScript and Python-Go repositories, where LLM agents drop sharply from their single-language performance. It builds on a mined corpus of confirmed cross-language bug fixes and a SCIP-based cross-language navigation graph, combined with contract checking and compile, lint and test feedback, and documents information leakage through Git history, caches and network access as a threat to reliable agent evaluation.',
+  },
   {
     id: 'rr-msr-2027',
     title:
       'Do Explicit Architecture Decisions Help LLMs Keep Cross-Language Interface Contracts Consistent? A Registered Report',
     authors: 'Md Sifat Hossain, Rick Kazman',
-    venue: 'Stage 1 Registered Report, MSR 2027 Registered Reports Track · to be submitted November 2026',
-    venueShort: 'MSR 2027 Registered Report',
+    venue: 'Stage 1 Registered Report · manuscript submitted, November 2026',
+    venueShort: 'Registered Report',
     year: 2026,
-    status: 'manuscript',
+    status: 'submitted',
     abstract:
       'A confirmatory study of whether an LLM keeps interface contracts that cross language boundaries (REST routes and payload schemas, gRPC services, native-call signatures) consistent more often when it is given the architecture decision explicitly, or a cross-language dependency graph. Tasks come from real change requests in open-source Java/TypeScript and Python/Go projects and run under three conditions (code only, code plus decision, code plus graph) with DeepSeek-V4.1-Flash and Claude Sonnet 5.5, in a sandbox without network or history. A contract-consistency oracle, the project\u2019s build and tests, and two raters judge each change; a simulation-based power analysis sets the sample size.',
   },
@@ -107,11 +117,22 @@ export const manuscripts: Publication[] = [
     title:
       'Code or Test? A Pre-registered Study of Which Artifact Language Models Side With When a Unit Test Fails',
     authors: 'Md Sifat Hossain, Md. Fahim Arefin',
-    venue: 'Manuscript · to be submitted November 2026',
+    venue: 'Manuscript submitted, November 2026',
     venueShort: 'Pre-registered study',
     year: 2026,
-    status: 'manuscript',
+    status: 'submitted',
     abstract:
       'When a unit test fails, either the code or the test is wrong, and a coding agent has to choose which to change. We introduce mirrored pairs: two versions of one failure that show the same call and the same two values, one with the code at fault and one with the test at fault. In a pre-registered study, six models act as judge and fixer on up to 989 pairs. With the specification shown, all six almost always name the faulty artifact, but how the repair request is worded matters far more than the step from judging to fixing. Measurements of test tampering should report how the request is worded and what the specification determines.',
+  },
+  {
+    id: 'cf-live-2026',
+    title: 'CF-Live: What Gates Catch in a Post-Cutoff Competitive Programming Benchmark',
+    authors: 'Md Sifat Hossain, et al.',
+    venue: 'Benchmarking paper · manuscript submitted, November 2026',
+    venueShort: 'Benchmark paper',
+    year: 2026,
+    status: 'submitted',
+    abstract:
+      'Competitive programming benchmarks face three quiet threats: contaminated problems, weak tests, and source data that differs from what humans saw. CF-Live is a pilot of 30 recent Codeforces problems whose contests began after each model\u2019s documented training cutoff. A problem is scored only after it passes gates: an independent oracle, an exact input validator, seeded stress tests, and calibrated sandbox limits. In a preregistered evaluation of four models, some solutions that passed every official sample failed the private tests, and the gates and reviews caught defects that would otherwise have reached scoring. Scraped statements also carried text addressed to AI systems and hidden from contestants.',
   },
 ];

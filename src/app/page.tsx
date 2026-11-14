@@ -293,7 +293,7 @@ function ProjectList({ items }: { items: typeof projects }) {
             </h3>
             <span className="font-mono text-xs text-ink-faint dark:text-neutral-500">{p.stack}</span>
           </div>
-          <p className="mt-1.5 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-300">{p.description}</p>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-ink-muted dark:text-neutral-300"><Rich text={p.description} /></p>
           {p.figure && (
             <figure className="mt-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}

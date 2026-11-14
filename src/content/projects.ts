@@ -51,7 +51,7 @@ export const projects: Project[] = [
     kind: 'research',
     link: 'https://github.com/sifat-hossain-niloy/cp-live-benchmark',
     description:
-      'Evaluation infrastructure for LLM competitive programming that avoids training-data contamination by using only newly released Codeforces problems, reviewed private tests, sandboxed Docker execution, and a static public leaderboard. Currently an infrastructure preview rather than a finished benchmark: the first collection found 94 candidate problems and prepared private draft problem directories, and no model scores are published yet.',
+      'Evaluation infrastructure for LLM competitive programming that avoids training-data contamination by using only newly released Codeforces problems, reviewed private tests, sandboxed Docker execution, and a static public leaderboard. A pilot of 30 post-cutoff problems, with every problem gated by an independent oracle, an exact input validator, seeded stress tests and calibrated sandbox limits, is written up in the manuscript **CF-Live: What Gates Catch in a Post-Cutoff Competitive Programming Benchmark** (submitted). The public site does not publish model scores yet.',
   },
   {
     name: 'Grammar-Seeded Agentic Fuzzer for tomlc99',
