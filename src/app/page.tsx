@@ -308,15 +308,19 @@ function ProjectList({ items }: { items: typeof projects }) {
               </figcaption>
             </figure>
           )}
-          {p.link && (
-            <a
-              href={p.link}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-block link text-xs font-sans"
-            >
-              Code on GitHub →
-            </a>
+          {(p.link || p.website) && (
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs font-sans">
+              {p.website && (
+                <a href={p.website} target="_blank" rel="noreferrer" className="link">
+                  Website ({p.website.replace(/^https?:\/\//, '')}) →
+                </a>
+              )}
+              {p.link && (
+                <a href={p.link} target="_blank" rel="noreferrer" className="link">
+                  Code on GitHub →
+                </a>
+              )}
+            </div>
           )}
         </article>
       ))}
